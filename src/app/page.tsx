@@ -1,7 +1,9 @@
-import { Main } from '@/components';
-
 const HomePage = () => {
-  return <Main />;
+  return (
+    <div>
+      <h1>Home Page</h1>
+    </div>
+  );
 };
 
 export default HomePage;
