@@ -19,10 +19,17 @@ describe('Heading', () => {
     );
   });
 
-  it('should render a heading with a line bottom when lineBottom is passed', () => {
-    render(<Heading lineBottom>Most Populars</Heading>);
+  it('should render a heading with a line bottom when line Bottom primary is passed', () => {
+    render(<Heading lineBottomPrimary>Most Populars</Heading>);
     expect(screen.getByRole('heading')).toHaveClass(
       'relative after:border-b-4 after:border-b-primary after:absolute after:left-0 after:-bottom-1 after:w-1/5',
+    );
+  });
+
+  it('should render a heading with a line bottom when line Bottom secondary is passed', () => {
+    render(<Heading lineBottomSecondary>Most Populars</Heading>);
+    expect(screen.getByRole('heading')).toHaveClass(
+      'relative after:border-b-4 after:border-b-secondary after:absolute after:left-0 after:-bottom-1 after:w-1/5',
     );
   });
 
