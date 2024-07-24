@@ -22,7 +22,27 @@ describe('Heading', () => {
   it('should render a heading with a line bottom when lineBottom is passed', () => {
     render(<Heading lineBottom>Most Populars</Heading>);
     expect(screen.getByRole('heading')).toHaveClass(
-      'relative after:border-b-4 after:border-b-primary after:absolute after:left-0 after:-bottom-1 after:w-12',
+      'relative after:border-b-4 after:border-b-primary after:absolute after:left-0 after:-bottom-1 after:w-1/5',
     );
+  });
+
+  it('should render a heading with a bottom with diferent tag when as is passed', () => {
+    const { rerender } = render(<Heading as="h1">Most Populars</Heading>);
+    expect(screen.getByRole('heading').tagName).toBe('H1');
+
+    rerender(<Heading as="h2">Most Populars</Heading>);
+    expect(screen.getByRole('heading').tagName).toBe('H2');
+
+    rerender(<Heading as="h3">Most Populars</Heading>);
+    expect(screen.getByRole('heading').tagName).toBe('H3');
+
+    rerender(<Heading as="h4">Most Populars</Heading>);
+    expect(screen.getByRole('heading').tagName).toBe('H4');
+
+    rerender(<Heading as="h5">Most Populars</Heading>);
+    expect(screen.getByRole('heading').tagName).toBe('H5');
+
+    rerender(<Heading as="h6">Most Populars</Heading>);
+    expect(screen.getByRole('heading').tagName).toBe('H6');
   });
 });

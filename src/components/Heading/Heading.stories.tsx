@@ -6,9 +6,10 @@ export default {
   component: Heading,
   args: {
     children: 'Most Populars',
-    color: 'white',
+    color: 'black',
     lineLeft: false,
     lineBottom: false,
+    as: 'h2',
   },
   argTypes: {
     children: { type: 'string' },
@@ -20,11 +21,45 @@ export default {
     },
     lineLeft: { control: { type: 'boolean' } },
     lineBottom: { control: { type: 'boolean' } },
+    as: {
+      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+      control: {
+        type: 'inline-radio',
+      },
+    },
   },
 } as Meta;
 
-export const Default: StoryFn<HeadingProps> = (args) => (
-  <div className="flex h-28 w-full items-center justify-center bg-gray">
-    <Heading {...args} />
+export const Default: StoryFn<HeadingProps> = (args) => <Heading {...args} />;
+
+export const WithLineLeft: StoryFn<HeadingProps> = (args) => (
+  <div className="space-y-2">
+    <Heading {...args} as="h1" />
+    <Heading {...args} as="h2" />
+    <Heading {...args} as="h3" />
+    <Heading {...args} as="h4" />
+    <Heading {...args} as="h5" />
+    <Heading {...args} as="h6" />
   </div>
 );
+
+WithLineLeft.args = {
+  lineLeft: true,
+  lineBottom: false,
+};
+
+export const WithLineBottom: StoryFn<HeadingProps> = (args) => (
+  <div className="space-y-2">
+    <Heading {...args} as="h1" lineLeft={false} lineBottom />
+    <Heading {...args} as="h2" lineLeft={false} lineBottom />
+    <Heading {...args} as="h3" lineLeft={false} lineBottom />
+    <Heading {...args} as="h4" lineLeft={false} lineBottom />
+    <Heading {...args} as="h5" lineLeft={false} lineBottom />
+    <Heading {...args} as="h6" lineLeft={false} lineBottom />
+  </div>
+);
+
+WithLineBottom.args = {
+  lineLeft: false,
+  lineBottom: true,
+};
