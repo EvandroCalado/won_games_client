@@ -18,6 +18,7 @@ export const Button: FC<ButtonProps> = ({
   className,
   ...props
 }) => {
+  // styles
   const sizeButtonStyles = {
     sm: `text-xs h-7 ${icon && !children ? 'px-2' : 'px-4'}`,
     md: `text-sm h-10 ${icon && !children ? 'px-2' : 'px-8'}`,

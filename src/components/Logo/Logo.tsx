@@ -14,6 +14,7 @@ export const Logo: FC<LogoProps> = ({
   hideOnMobile = false,
   className,
 }) => {
+  // styles
   const logoColorStyles = color === 'white' ? 'text-white' : 'text-black';
   const logoSizeStyles = size === 'large' ? 'w-52 h-14' : 'w-28 h-8';
   const logoHiddenStyles = hideOnMobile
