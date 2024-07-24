@@ -5,22 +5,31 @@ export type LogoProps = {
   color?: 'white' | 'black';
   size?: 'normal' | 'large';
   hideOnMobile?: boolean;
+  className?: string;
 };
 
 export const Logo: FC<LogoProps> = ({
   color = 'white',
   size = 'normal',
   hideOnMobile = false,
+  className,
 }) => {
-  const logoColor = color === 'white' ? 'text-white' : 'text-black';
-  const logoSize = size === 'large' ? 'w-52 h-14' : 'w-28 h-8';
-  const logoHidden = hideOnMobile
-    ? 'max-md:h-11 max-md:w-14 max-md:[&>svg]:h-11'
+  const logoColorStyles = color === 'white' ? 'text-white' : 'text-black';
+  const logoSizeStyles = size === 'large' ? 'w-52 h-14' : 'w-28 h-8';
+  const logoHiddenStyles = hideOnMobile
+    ? 'max-md:h-11 max-md:w-14 max-md:[&>svg]:h-11 pointer-events-none'
     : '';
-  const labelHidden = hideOnMobile ? 'max-md:hidden pointer-events-none' : '';
+  const labelHidden = hideOnMobile ? 'max-md:hidden' : '';
 
   return (
-    <div className={twMerge(logoColor, logoSize, logoHidden)}>
+    <div
+      className={twMerge(
+        logoColorStyles,
+        logoSizeStyles,
+        logoHiddenStyles,
+        className,
+      )}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

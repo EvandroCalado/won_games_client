@@ -17,12 +17,15 @@ export const Heading: FC<HeadingProps> = ({
   as = 'h2',
 }) => {
   const Element = as;
-  const colorHeading = color === 'white' ? 'text-white' : 'text-black';
-  const lineLeftHeading = lineLeft ? 'pl-2 border-l-4 border-l-secondary' : '';
-  const lineBottomHeading = lineBottom
+
+  const colorHeadingStyles = color === 'white' ? 'text-white' : 'text-black';
+  const lineLeftHeadingStyles = lineLeft
+    ? 'pl-2 border-l-4 border-l-secondary'
+    : '';
+  const lineBottomHeadingStyles = lineBottom
     ? 'relative after:border-b-4 after:border-b-primary after:absolute after:left-0 after:-bottom-1 after:w-1/5'
     : '';
-  const sizeHeading = {
+  const sizeHeadingStyles = {
     h1: 'text-3xl md:text-4xl',
     h2: 'text-2xl md:text-3xl',
     h3: 'text-xl md:text-2xl',
@@ -35,10 +38,10 @@ export const Heading: FC<HeadingProps> = ({
     <Element
       className={twMerge(
         'w-max text-2xl font-semibold md:text-3xl',
-        colorHeading,
-        lineLeftHeading,
-        lineBottomHeading,
-        sizeHeading[as],
+        colorHeadingStyles,
+        lineLeftHeadingStyles,
+        lineBottomHeadingStyles,
+        sizeHeadingStyles[as],
       )}
     >
       {children}

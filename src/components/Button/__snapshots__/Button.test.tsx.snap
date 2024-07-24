@@ -2,7 +2,7 @@
 
 exports[`Button should render a button snapshot 1`] = `
 <button
-  class="flex items-center justify-center gap-2 rounded bg-gradient-to-b from-red to-primary p-2 font-semibold text-white text-sm h-10 px-8 [&>svg]:w-5 [&>svg]:h-5"
+  class="flex items-center justify-center gap-2 rounded bg-gradient-to-b from-red to-primary p-2 text-white duration-150 hover:brightness-95 text-sm h-10 px-8 [&>svg]:w-5 [&>svg]:h-5"
 >
   test
 </button>
