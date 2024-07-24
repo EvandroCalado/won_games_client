@@ -4,15 +4,35 @@ import { Logo, LogoProps } from '.';
 export default {
   title: 'Components/Logo',
   args: {
-    color: 'white',
+    color: 'black',
     size: 'normal',
     hideOnMobile: false,
+  },
+  argTypes: {
+    color: {
+      control: {
+        type: 'inline-radio',
+      },
+    },
+    size: {
+      control: {
+        type: 'inline-radio',
+      },
+    },
   },
   component: Logo,
 } as Meta;
 
-export const Default: StoryFn<LogoProps> = (args) => (
-  <div className="flex h-28 w-full items-center justify-center bg-gray">
-    <Logo {...args} />
-  </div>
-);
+export const Default: StoryFn<LogoProps> = (args) => <Logo {...args} />;
+
+export const Large: StoryFn<LogoProps> = (args) => <Logo {...args} />;
+
+Large.args = {
+  size: 'large',
+};
+
+export const Mobile: StoryFn<LogoProps> = (args) => <Logo {...args} />;
+
+Mobile.args = {
+  hideOnMobile: true,
+};

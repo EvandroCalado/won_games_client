@@ -14,7 +14,6 @@ export default {
   argTypes: {
     children: { type: 'string' },
     color: {
-      options: ['white', 'black'],
       control: {
         type: 'inline-radio',
       },
@@ -22,7 +21,6 @@ export default {
     lineLeft: { control: { type: 'boolean' } },
     lineBottom: { control: { type: 'boolean' } },
     as: {
-      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
       control: {
         type: 'inline-radio',
       },
