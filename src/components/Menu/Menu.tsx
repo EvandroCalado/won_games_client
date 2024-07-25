@@ -64,12 +64,12 @@ export const Menu: FC<MenuProps> = ({ username }) => {
       {/* menu mobile */}
       <nav
         aria-hidden={!isOpen}
-        className={`absolute inset-0 flex h-screen flex-1 cursor-pointer flex-col items-center justify-center gap-16 overflow-hidden bg-white transition-opacity duration-300 ${menuStyles}`}
+        className={`absolute inset-0 flex h-screen flex-1 flex-col items-center justify-center gap-16 overflow-hidden bg-white transition-opacity duration-300 ${menuStyles}`}
       >
         <IconX
           aria-label="close menu"
           onClick={() => setIsOpen(false)}
-          className="absolute right-0 top-0 m-4"
+          className="absolute right-0 top-0 m-4 cursor-pointer"
         />
         {/* nav links mobile */}
         <div
