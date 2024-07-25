@@ -19,7 +19,8 @@
     "@tabler/icons-react": "^3.11.0",
     "next": "14.2.5",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "tailwind-variants": "^0.2.1"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",

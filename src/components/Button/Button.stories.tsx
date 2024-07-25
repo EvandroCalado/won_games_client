@@ -4,6 +4,11 @@ import { Button, ButtonProps } from '.';
 
 export default {
   title: 'Components/Button',
+  args: {
+    size: 'md',
+    as: 'button',
+    className: '',
+  },
   argTypes: {
     size: {
       options: ['sm', 'md', 'lg'],
@@ -11,9 +16,14 @@ export default {
         type: 'inline-radio',
       },
     },
-    fullWidth: { control: { type: 'boolean' } },
     icon: {
       type: 'function',
+    },
+    as: {
+      options: ['button', 'a'],
+      control: {
+        type: 'inline-radio',
+      },
     },
   },
   component: Button,
@@ -23,34 +33,22 @@ export const Default: StoryFn<ButtonProps> = (args) => (
   <Button {...args}>Buy now</Button>
 );
 
-Default.args = {
-  fullWidth: false,
-};
-
 export const WithIcon: StoryFn<ButtonProps> = (args) => (
   <Button {...args}>Buy now</Button>
 );
 
 WithIcon.args = {
-  children: 'Buy now',
-  fullWidth: false,
-  icon: <IconShoppingCartPlus />,
-};
-
-export const WithIconAndFullWidth: StoryFn<ButtonProps> = (args) => (
-  <Button {...args}>Buy now</Button>
-);
-
-WithIconAndFullWidth.args = {
-  children: 'Buy now',
-  fullWidth: true,
   icon: <IconShoppingCartPlus />,
 };
 
 export const OnlyIcon: StoryFn<ButtonProps> = (args) => <Button {...args} />;
 
 OnlyIcon.args = {
-  children: null,
-  fullWidth: false,
   icon: <IconShoppingCartPlus />,
 };
+
+export const AsLink: StoryFn<ButtonProps> = (args) => (
+  <Button {...args} as="a" href="/link">
+    Buy now
+  </Button>
+);

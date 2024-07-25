@@ -24,11 +24,6 @@ describe('Button', () => {
     );
   });
 
-  it('should render button full width when fullWidth is true', () => {
-    render(<Button fullWidth>test</Button>);
-    expect(screen.getByRole('button', { name: /test/i })).toHaveClass('w-full');
-  });
-
   it('should render button with icon when icon is passed', () => {
     render(
       <Button icon={<IconShoppingCartPlus data-testid="icon" />}>test</Button>,

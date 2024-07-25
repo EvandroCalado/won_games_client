@@ -22,7 +22,7 @@ export const Menu: FC<MenuProps> = ({ username }) => {
   // styles
   const menuStyles = `${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`;
   const linkStyles =
-    'after-border-secondary relative w-max text-center text-xl font-bold text-black after:absolute after:-bottom-1 after:left-1/2 after:w-0 after:border-b-2 after:border-primary after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full text-black';
+    'after-border-secondary relative w-max text-center text-xl font-bold text-black after:absolute after:-bottom-1 after:left-1/2 after:w-0 after:border-b-2 after:border-primary after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full';
   const menuAnimaionStyles = `${isOpen ? 'translate-y-0' : 'translate-y-10 md:translate-y-0'}`;
 
   return (
@@ -105,7 +105,7 @@ export const Menu: FC<MenuProps> = ({ username }) => {
               menuAnimaionStyles,
             )}
           >
-            <Button fullWidth size="lg">
+            <Button size="lg" className="w-full">
               Log in now
             </Button>
 
@@ -114,13 +114,9 @@ export const Menu: FC<MenuProps> = ({ username }) => {
               <div className="border-1 absolute left-1/2 top-1/2 -z-10 h-0.5 w-10 -translate-x-1/2 bg-black"></div>
             </span>
 
-            <Link
-              href={'/login'}
-              className="border-b-2 border-primary text-xs text-primary hover:brightness-90"
-              title="Sign Up"
-            >
-              Sign Up
-            </Link>
+            <Button as="a" href="/signup">
+              Sign up
+            </Button>
           </div>
         )}
       </nav>
