@@ -40,7 +40,17 @@ describe('Button', () => {
   it('should render button with only icon when icon is passed', () => {
     render(<Button icon={<IconShoppingCartPlus data-testid="icon" />} />);
     expect(screen.getByRole('button')).toBeInTheDocument();
-    expect(screen.getByRole('button')).toHaveClass('px-2');
+    expect(screen.getByRole('button')).toHaveClass('px-8');
+  });
+
+  it('should render a button as a link', () => {
+    render(
+      <Button as="a" href="/link">
+        test
+      </Button>,
+    );
+    expect(screen.getByRole('link').tagName).toBe('A');
+    expect(screen.getByRole('link')).toHaveAttribute('href', '/link');
   });
 
   it('should render a button snapshot', () => {

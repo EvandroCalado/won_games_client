@@ -5,7 +5,6 @@ import { Button, ButtonProps } from '.';
 export default {
   title: 'Components/Button',
   argTypes: {
-    children: { type: 'string' },
     size: {
       options: ['sm', 'md', 'lg'],
       control: {
@@ -25,7 +24,6 @@ export const Default: StoryFn<ButtonProps> = (args) => (
 );
 
 Default.args = {
-  children: 'Buy now',
   fullWidth: false,
 };
 

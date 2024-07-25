@@ -1,28 +1,40 @@
-import { ButtonHTMLAttributes, FC, ReactNode } from 'react';
+import {
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+  ElementType,
+  FC,
+  ReactNode,
+} from 'react';
 import { twMerge } from 'tailwind-merge';
 
-export interface ButtonProps
-  extends ButtonHTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
-  children?: ReactNode;
+type ButtonTypes =
+  | ButtonHTMLAttributes<HTMLButtonElement>
+  | AnchorHTMLAttributes<HTMLAnchorElement>;
+
+export type ButtonProps = {
   fullWidth?: boolean;
   size?: 'sm' | 'md' | 'lg';
   icon?: ReactNode;
+  as?: ElementType;
   className?: string;
-}
+} & ButtonTypes;
 
 export const Button: FC<ButtonProps> = ({
   children,
   fullWidth = false,
   size = 'md',
   icon,
+  as = 'button',
   className,
   ...props
 }) => {
+  const Element = as;
+
   // styles
   const sizeButtonStyles = {
-    sm: `text-xs h-7 ${icon && !children ? 'px-2' : 'px-4'}`,
-    md: `text-sm h-10 ${icon && !children ? 'px-2' : 'px-8'}`,
-    lg: `text-base h-12 ${icon && !children ? 'px-2' : 'px-12'}`,
+    sm: 'text-xs h-7 px-4 ',
+    md: 'text-sm h-10 px-8 ',
+    lg: 'text-base h-12 px-12 ',
   };
   const fullWidthButtonStyles = fullWidth ? 'w-full' : '';
   const sizeIconStyles = {
@@ -32,7 +44,7 @@ export const Button: FC<ButtonProps> = ({
   };
 
   return (
-    <button
+    <Element
       className={twMerge(
         'flex items-center justify-center gap-2 rounded bg-gradient-to-b from-red to-primary p-2 text-white duration-150 hover:brightness-95',
         fullWidthButtonStyles,
@@ -44,6 +56,6 @@ export const Button: FC<ButtonProps> = ({
     >
       {!!icon && icon}
       {!!children && children}
-    </button>
+    </Element>
   );
 };
