@@ -8,6 +8,7 @@ export type HeadingProps = {
   lineBottomPrimary?: boolean;
   lineBottomSecondary?: boolean;
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  className?: string;
 };
 
 export const Heading: FC<HeadingProps> = ({
@@ -17,6 +18,7 @@ export const Heading: FC<HeadingProps> = ({
   lineBottomPrimary = false,
   lineBottomSecondary = false,
   as = 'h2',
+  className,
 }) => {
   // transform as a element component
   const Element = as;
@@ -48,6 +50,7 @@ export const Heading: FC<HeadingProps> = ({
         lineBottomPrimaryStyles,
         lineBottomSecondaryStyles,
         sizeStyles[as],
+        className,
       )}
     >
       {children}
