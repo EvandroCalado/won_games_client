@@ -11,6 +11,7 @@ export default {
     lineBottomPrimary: false,
     lineBottomSecondary: false,
     as: 'h2',
+    className: '',
   },
   argTypes: {
     children: { type: 'string' },
@@ -18,13 +19,16 @@ export default {
       control: {
         type: 'inline-radio',
       },
+      options: ['white', 'black'],
     },
     lineLeft: { control: { type: 'boolean' } },
-    lineBottom: { control: { type: 'boolean' } },
+    lineBottomPrimary: { control: { type: 'boolean' } },
+    lineBottomSecondary: { control: { type: 'boolean' } },
     as: {
       control: {
         type: 'inline-radio',
       },
+      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
     },
   },
 } as Meta;
