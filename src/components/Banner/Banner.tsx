@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { Button } from '../Button';
 import { Heading } from '../Heading';
+import { Ribbon } from '../Ribbon';
 
 export type BannerProps = {
   img: string;
@@ -8,6 +9,9 @@ export type BannerProps = {
   subtitle: string;
   buttonLabel: string;
   buttonLink: string;
+  ribbon?: string;
+  ribbonSize?: 'sm' | 'md';
+  ribbonColor?: 'primary' | 'secondary';
 };
 
 export const Banner: FC<BannerProps> = ({
@@ -16,9 +20,22 @@ export const Banner: FC<BannerProps> = ({
   subtitle,
   buttonLabel,
   buttonLink,
+  ribbon,
+  ribbonSize,
+  ribbonColor,
 }) => {
   return (
     <div className="relative shadow-lg">
+      {/* corner ribbon */}
+      {!!ribbon && (
+        <Ribbon
+          color={ribbonColor}
+          size={ribbonSize}
+          className="max-md:right-0"
+        >
+          {ribbon}
+        </Ribbon>
+      )}
       {/* image */}
       <div
         style={{ backgroundImage: `url(${img})` }}
@@ -27,7 +44,7 @@ export const Banner: FC<BannerProps> = ({
         className="h-56 w-full bg-lightGray bg-cover bg-center bg-no-repeat md:h-[580px]"
       ></div>
       {/* caption */}
-      <div className="w-full rounded-bl rounded-br p-6 max-md:bg-black/70 md:absolute md:bottom-0 md:left-0 md:bg-gradient-to-t md:from-black/90 md:via-black/70 md:to-black/0 md:p-10">
+      <div className="w-full rounded-bl rounded-br p-6 max-md:bg-black/70 md:absolute md:bottom-0 md:left-0 md:bg-gradient-to-t md:from-black/90 md:via-black/80 md:to-black/0 md:p-10">
         <Heading className="font-bold">{title}</Heading>
         <h3
           dangerouslySetInnerHTML={{ __html: subtitle }}

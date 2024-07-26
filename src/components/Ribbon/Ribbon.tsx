@@ -1,4 +1,5 @@
 import { FC, ReactNode } from 'react';
+import { twMerge } from 'tailwind-merge';
 import { tv, VariantProps } from 'tailwind-variants';
 
 const ribbon = tv({
@@ -11,11 +12,11 @@ const ribbon = tv({
     color: {
       primary: {
         container: 'flex items-center font-bold text-white bg-red',
-        tail: 'absolute  right-0 border-b-0 border-solid border-t-[#9B4242]',
+        tail: 'max-md:hidden absolute  right-0 border-b-0 border-solid border-t-[#9B4242]',
       },
       secondary: {
         container: 'flex items-center font-bold text-white bg-secondary',
-        tail: 'absolute right-0 border-b-0 border-solid border-t-[#2E8379]',
+        tail: 'max-md:hidden absolute right-0 border-b-0 border-solid border-t-[#2E8379]',
       },
     },
     size: {
@@ -38,13 +39,19 @@ const ribbon = tv({
 
 export type RibbonProps = {
   children: ReactNode;
+  className?: string;
 } & VariantProps<typeof ribbon>;
 
-export const Ribbon: FC<RibbonProps> = ({ children, color, size }) => {
+export const Ribbon: FC<RibbonProps> = ({
+  children,
+  color,
+  size,
+  className,
+}) => {
   const { container, tail } = ribbon({ color, size });
 
   return (
-    <div className={container()}>
+    <div className={twMerge(container(), className)}>
       <div className={tail()}></div>
       {children}
     </div>

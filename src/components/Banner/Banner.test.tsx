@@ -24,6 +24,29 @@ describe('Banner', () => {
     ).toBeInTheDocument();
   });
 
+  it('should render a corner ribbon', () => {
+    render(<Banner {...props} ribbon="My ribbon" ribbonSize="md" />);
+
+    expect(screen.getByText(/my ribbon/i)).toBeInTheDocument();
+    expect(screen.getByText(/my ribbon/i)).toHaveClass('bg-red h-9 text-sm');
+  });
+
+  it('should render a corner ribbon with primary color and small size', () => {
+    render(
+      <Banner
+        {...props}
+        ribbon="My ribbon"
+        ribbonSize="sm"
+        ribbonColor="secondary"
+      />,
+    );
+
+    expect(screen.getByText(/my ribbon/i)).toBeInTheDocument();
+    expect(screen.getByText(/my ribbon/i)).toHaveClass(
+      'bg-secondary h-6 text-xs',
+    );
+  });
+
   it('should render a snapshot', () => {
     const { container } = render(<Banner {...props} />);
 
