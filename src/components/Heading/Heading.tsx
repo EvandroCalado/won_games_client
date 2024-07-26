@@ -3,7 +3,7 @@ import { twMerge } from 'tailwind-merge';
 import { tv, VariantProps } from 'tailwind-variants';
 
 const heading = tv({
-  base: 'w-max text-2xl font-semibold md:text-3xl',
+  base: 'w-max text-2xl md:text-3xl',
 
   variants: {
     color: {
