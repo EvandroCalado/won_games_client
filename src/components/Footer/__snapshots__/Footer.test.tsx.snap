@@ -100,7 +100,7 @@ exports[`Footer should render a footer snapshot 1`] = `
   >
     <div>
       <h3
-        class="w-max font-semibold text-black relative after:border-b-4 after:border-b-secondary after:absolute after:left-0 after:-bottom-1 after:w-1/5 text-xl md:text-2xl mb-8 uppercase"
+        class="w-max text-black relative after:border-b-4 after:border-b-secondary after:absolute after:left-0 after:-bottom-1 after:w-1/5 text-xl md:text-2xl mb-8 uppercase"
       >
         Contact
       </h3>
@@ -115,7 +115,7 @@ exports[`Footer should render a footer snapshot 1`] = `
       aria-label="social-media"
     >
       <h3
-        class="w-max font-semibold text-black relative after:border-b-4 after:border-b-secondary after:absolute after:left-0 after:-bottom-1 after:w-1/5 text-xl md:text-2xl mb-8 uppercase"
+        class="w-max text-black relative after:border-b-4 after:border-b-secondary after:absolute after:left-0 after:-bottom-1 after:w-1/5 text-xl md:text-2xl mb-8 uppercase"
       >
         Follow us
       </h3>
@@ -158,7 +158,7 @@ exports[`Footer should render a footer snapshot 1`] = `
       aria-labelledby="resources"
     >
       <h3
-        class="w-max font-semibold text-black relative after:border-b-4 after:border-b-secondary after:absolute after:left-0 after:-bottom-1 after:w-1/5 text-xl md:text-2xl mb-8 uppercase"
+        class="w-max text-black relative after:border-b-4 after:border-b-secondary after:absolute after:left-0 after:-bottom-1 after:w-1/5 text-xl md:text-2xl mb-8 uppercase"
       >
         Links
       </h3>
@@ -187,7 +187,7 @@ exports[`Footer should render a footer snapshot 1`] = `
       aria-label="contact"
     >
       <h3
-        class="w-max font-semibold text-black relative after:border-b-4 after:border-b-secondary after:absolute after:left-0 after:-bottom-1 after:w-1/5 text-xl md:text-2xl mb-8 uppercase"
+        class="w-max text-black relative after:border-b-4 after:border-b-secondary after:absolute after:left-0 after:-bottom-1 after:w-1/5 text-xl md:text-2xl mb-8 uppercase"
       >
         Location
       </h3>
