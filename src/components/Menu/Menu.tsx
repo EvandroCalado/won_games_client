@@ -114,9 +114,12 @@ export const Menu: FC<MenuProps> = ({ username }) => {
               <div className="border-1 absolute left-1/2 top-1/2 -z-10 h-0.5 w-10 -translate-x-1/2 bg-black"></div>
             </span>
 
-            <Button as="a" href="/signup">
+            <Link
+              href="/signup"
+              className="border-b-2 border-primary text-sm text-primary hover:border-primary/80 hover:text-primary/80"
+            >
               Sign up
-            </Button>
+            </Link>
           </div>
         )}
       </nav>
