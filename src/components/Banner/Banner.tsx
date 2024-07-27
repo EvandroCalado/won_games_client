@@ -31,7 +31,7 @@ export const Banner: FC<BannerProps> = ({
         <Ribbon
           color={ribbonColor}
           size={ribbonSize}
-          className="max-md:right-0"
+          className="max-md:right-0 [&>span]:max-md:hidden"
         >
           {ribbon}
         </Ribbon>
