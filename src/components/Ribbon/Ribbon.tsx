@@ -12,11 +12,11 @@ const ribbon = tv({
     color: {
       primary: {
         container: 'flex items-center font-bold text-white bg-red',
-        tail: 'max-md:hidden absolute  right-0 border-b-0 border-solid border-t-[#9B4242]',
+        tail: 'absolute  right-0 border-b-0 border-solid border-t-[#9B4242]',
       },
       secondary: {
         container: 'flex items-center font-bold text-white bg-secondary',
-        tail: 'max-md:hidden absolute right-0 border-b-0 border-solid border-t-[#2E8379]',
+        tail: 'absolute right-0 border-b-0 border-solid border-t-[#2E8379]',
       },
     },
     size: {
@@ -52,7 +52,7 @@ export const Ribbon: FC<RibbonProps> = ({
 
   return (
     <div className={twMerge(container(), className)}>
-      <div className={tail()}></div>
+      <span className={tail()}></span>
       {children}
     </div>
   );
