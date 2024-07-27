@@ -1,6 +1,7 @@
 export * from './Banner';
 export * from './Button';
 export * from './Footer';
+export * from './GameCard';
 export * from './Heading';
 export * from './Highlight';
 export * from './Logo';
