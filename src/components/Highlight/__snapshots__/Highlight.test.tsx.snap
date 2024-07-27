@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Highlight should render a snapshot 1`] = `
+<div>
+  <section
+    class="relative grid h-56 grid-cols-6 bg-cover bg-center bg-no-repeat after:absolute after:h-full after:w-full after:bg-black/60 after:content-[''] md:h-80"
+    style="background-image: url(/img/red-dead-img.jpg);"
+  >
+    <div
+      class="false relative col-span-2 h-40 w-full self-end pl-4 sm:h-56 md:h-80 md:pl-11"
+    >
+      <img
+        alt="Heading 1"
+        class="z-20 object-contain"
+        data-nimg="fill"
+        decoding="async"
+        fetchpriority="high"
+        sizes="100vw"
+        src="/_next/image?url=%2Ffloat-image.png&w=3840&q=75"
+        srcset="/_next/image?url=%2Ffloat-image.png&w=640&q=75 640w, /_next/image?url=%2Ffloat-image.png&w=750&q=75 750w, /_next/image?url=%2Ffloat-image.png&w=828&q=75 828w, /_next/image?url=%2Ffloat-image.png&w=1080&q=75 1080w, /_next/image?url=%2Ffloat-image.png&w=1200&q=75 1200w, /_next/image?url=%2Ffloat-image.png&w=1920&q=75 1920w, /_next/image?url=%2Ffloat-image.png&w=2048&q=75 2048w, /_next/image?url=%2Ffloat-image.png&w=3840&q=75 3840w"
+        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+      />
+    </div>
+    <div
+      class="col-span-4 items-end z-10 flex flex-col gap-2 p-4 text-right md:justify-end md:p-11"
+    >
+      <h4
+        class="w-max text-white text-lg font-bold md:text-3xl"
+      >
+        Heading 1
+      </h4>
+      <h6
+        class="w-max text-white text-sm font-light md:text-xl"
+      >
+        Heading 2
+      </h6>
+      <a
+        class="flex items-center justify-center gap-2 rounded bg-gradient-to-b from-red to-primary p-2 text-white duration-150 hover:bg-gradient-to-b hover:from-red/95 hover:to-primary/95 active:bg-gradient-to-b active:from-red/80 active:to-primary/80 w-max text-sm h-10 px-8 [&>svg]:w-5 [&>svg]:h-5 mt-6"
+        href="/games/defy-death"
+      >
+        Buy now
+      </a>
+    </div>
+  </section>
+</div>
+`;
