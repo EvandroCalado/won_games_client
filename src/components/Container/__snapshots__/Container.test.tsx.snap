@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container should render a snapshot 1`] = `
+<div
+  class="mx-auto max-w-7xl px-4"
+>
+  container
+</div>
+`;
