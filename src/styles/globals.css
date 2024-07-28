@@ -60,3 +60,58 @@
     margin: 8px 0;
   }
 }
+
+.game-card-slider .slick-track,
+.game-card-slider .slick-list {
+  display: flex;
+}
+
+.game-card-slider .slick-slide > div {
+  margin: 0 8px;
+  flex: 1 0 auto;
+  height: 100%;
+}
+
+.game-card-slider .slick-list {
+  margin: 0 -8px;
+}
+
+.game-card-slider .slick-prev,
+.game-card-slider .slick-next {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  transform: translate(0, -50%);
+}
+
+.game-card-slider .slick-prev {
+  left: -56px;
+}
+
+.game-card-slider .slick-next {
+  right: -56px;
+}
+
+.game-card-slider .slick-prev.slick-disabled,
+.game-card-slider .slick-next.slick-disabled {
+  visibility: hidden;
+}
+
+@media (max-width: 768px) {
+  .game-card-slider .slick-slide > div {
+    margin: 0 4px;
+  }
+
+  .game-card-slider .slick-list {
+    margin: 0 4px;
+  }
+}
+
+body .slick-prev::before,
+body .slick-next::before {
+  display: none;
+}
