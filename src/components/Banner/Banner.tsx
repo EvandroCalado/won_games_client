@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { twMerge } from 'tailwind-merge';
 import { Button } from '../Button';
 import { Heading } from '../Heading';
 import { Ribbon } from '../Ribbon';
@@ -12,6 +13,7 @@ export type BannerProps = {
   ribbon?: string;
   ribbonSize?: 'sm' | 'md';
   ribbonColor?: 'primary' | 'secondary';
+  className?: string;
 };
 
 export const Banner: FC<BannerProps> = ({
@@ -23,9 +25,10 @@ export const Banner: FC<BannerProps> = ({
   ribbon,
   ribbonSize,
   ribbonColor,
+  className,
 }) => {
   return (
-    <div className="relative shadow-lg">
+    <div className={twMerge('relative shadow-lg', className)}>
       {/* corner ribbon */}
       {!!ribbon && (
         <Ribbon

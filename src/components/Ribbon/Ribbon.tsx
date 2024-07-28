@@ -4,19 +4,19 @@ import { tv, VariantProps } from 'tailwind-variants';
 
 const ribbon = tv({
   slots: {
-    container: '',
-    tail: '',
+    container: 'flex items-center font-bold text-white',
+    tail: 'absolute right-0 border-solid',
   },
 
   variants: {
     color: {
       primary: {
-        container: 'flex items-center font-bold text-white bg-red',
-        tail: 'absolute  right-0 border-b-0 border-solid border-t-[#9B4242]',
+        container: 'bg-red',
+        tail: 'border-t-[#9B4242] border-r-transparent',
       },
       secondary: {
-        container: 'flex items-center font-bold text-white bg-secondary',
-        tail: 'absolute right-0 border-b-0 border-solid border-t-[#2E8379]',
+        container: 'bg-secondary',
+        tail: 'border-t-[#2E8379] border-r-transparent',
       },
     },
     size: {

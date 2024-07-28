@@ -1,3 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.banner-slider .slick-dots {
+  list-style: none;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.banner-slider .slick-dots li {
+  background-color: #fafafa;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 8px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.banner-slider .slick-dots li.slick-active {
+  background-color: #f231a5;
+}
+
+.banner-slider .slick-dots li:focus-within {
+  background-color: #f231a5;
+}
+
+.banner-slider .slick-dots li button {
+  opacity: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+}
+
+.banner-slider .slick-slide {
+  visibility: hidden;
+}
+
+.banner-slider .slick-slide.slick-active.slick-current {
+  visibility: visible;
+}
+
+@media (min-width: 768px) {
+  .banner-slider .slick-dots {
+    position: absolute;
+    right: 0;
+    flex-direction: column;
+    height: 100%;
+    top: 0;
+    margin: 0;
+  }
+
+  .banner-slider .slick-dots li {
+    margin: 8px 0;
+  }
+}
