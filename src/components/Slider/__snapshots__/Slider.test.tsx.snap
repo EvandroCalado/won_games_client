@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slider should render a snapshot 1`] = `
+<div>
+  <div
+    class="slick-slider slick-initialized"
+    dir="ltr"
+  >
+    <button
+      class="slick-arrow slick-prev slick-disabled"
+      data-role="none"
+      style="display: block;"
+      type="button"
+    >
+       
+      Previous
+    </button>
+    <div
+      class="slick-list"
+    >
+      <div
+        class="slick-track"
+        style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
+      >
+        <div
+          aria-hidden="false"
+          class="slick-slide slick-active slick-current"
+          data-index="0"
+          style="outline: none; width: 0px;"
+          tabindex="-1"
+        >
+          <div>
+            <p
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              item1
+            </p>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="slick-slide"
+          data-index="1"
+          style="outline: none; width: 0px;"
+          tabindex="-1"
+        >
+          <div>
+            <p
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              item2
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      class="slick-arrow slick-next"
+      data-role="none"
+      style="display: block;"
+      type="button"
+    >
+       
+      Next
+    </button>
+  </div>
+</div>
+`;

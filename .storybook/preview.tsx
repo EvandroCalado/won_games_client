@@ -1,6 +1,7 @@
 import '@/styles/globals.css';
 import { withThemeByClassName } from '@storybook/addon-themes';
 import type { Preview, ReactRenderer } from '@storybook/react';
+import 'slick-carousel/slick/slick.css';
 
 const preview: Preview = {
   parameters: {
