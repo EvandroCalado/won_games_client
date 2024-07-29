@@ -4,19 +4,13 @@ import { mock } from './mock';
 
 export default {
   title: 'Components/BannerSlider',
+  component: BannerSlider,
   args: {
     items: mock,
   },
-  argTypes: {
-    items: { type: 'function' },
-  },
   parameters: {
     layout: 'fullscreen',
-    backgrounds: {
-      default: 'dark',
-    },
   },
-  component: BannerSlider,
 } as Meta;
 
 export const Default: StoryFn<BannerSliderProps> = (args) => (

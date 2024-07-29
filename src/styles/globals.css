@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-mainBg dark:bg-white;
+}
+
 .banner-slider .slick-dots {
   list-style: none;
   display: flex !important;

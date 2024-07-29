@@ -6,9 +6,7 @@ export default {
   component: Menu,
   parameters: {
     layout: 'fullscreen',
-    backgrounds: {
-      default: 'dark',
-    },
+    defaultBackground: 'dark',
   },
 } as Meta;
 
