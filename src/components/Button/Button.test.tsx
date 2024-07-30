@@ -52,4 +52,14 @@ describe('Button', () => {
     const { container } = render(<Button>test</Button>);
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it('should render variant ghost', () => {
+    render(<Button variant="ghost">test</Button>);
+    expect(screen.getByRole('button')).toHaveClass('text-primary');
+  });
+
+  it('should render a button snapshot', () => {
+    const { container } = render(<Button>test</Button>);
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });

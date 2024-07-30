@@ -5,11 +5,18 @@ import { Button, ButtonProps } from '.';
 export default {
   title: 'Components/Button',
   args: {
+    variant: 'primary',
     size: 'md',
     as: 'button',
     className: '',
   },
   argTypes: {
+    variant: {
+      options: ['primary', 'ghost'],
+      control: {
+        type: 'inline-radio',
+      },
+    },
     size: {
       options: ['sm', 'md', 'lg'],
       control: {
@@ -39,6 +46,15 @@ export const WithIcon: StoryFn<ButtonProps> = (args) => (
 
 WithIcon.args = {
   icon: <IconShoppingCartPlus />,
+};
+
+export const Ghost: StoryFn<ButtonProps> = (args) => (
+  <Button {...args}>Buy now</Button>
+);
+
+Ghost.args = {
+  icon: <IconShoppingCartPlus />,
+  variant: 'ghost',
 };
 
 export const OnlyIcon: StoryFn<ButtonProps> = (args) => <Button {...args} />;
