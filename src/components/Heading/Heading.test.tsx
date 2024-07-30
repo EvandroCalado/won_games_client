@@ -7,9 +7,9 @@ describe('Heading', () => {
     expect(screen.getByRole('heading')).toHaveClass('text-white');
   });
 
-  it('should render a heading with a black color when color is passed', () => {
+  it('should render a heading with a black color on desktop', () => {
     render(<Heading color="black">Most Populars</Heading>);
-    expect(screen.getByRole('heading')).toHaveClass('text-black');
+    expect(screen.getByRole('heading')).toHaveClass('md:text-black');
   });
 
   it('should render a heading with a line left when lineLeft is passed', () => {

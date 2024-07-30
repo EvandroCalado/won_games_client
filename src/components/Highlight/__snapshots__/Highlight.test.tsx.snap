@@ -3,7 +3,7 @@
 exports[`Highlight should render a snapshot 1`] = `
 <div>
   <section
-    class="relative grid h-56 grid-cols-6 bg-cover bg-center bg-no-repeat after:absolute after:h-full after:w-full after:bg-black/60 after:content-[''] md:h-80"
+    class="relative grid h-56 grid-cols-6 bg-cover bg-center bg-no-repeat after:absolute after:h-full after:w-full after:bg-black/60 after:content-[''] max-md:-mx-4 md:h-80"
     style="background-image: url(/img/red-dead-img.jpg);"
   >
     <div

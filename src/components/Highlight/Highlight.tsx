@@ -25,7 +25,7 @@ export const Highlight: FC<HighlightProps> = ({
   return (
     <section
       style={{ backgroundImage: `url(${backgroundImage})` }}
-      className="relative grid h-56 grid-cols-6 bg-cover bg-center bg-no-repeat after:absolute after:h-full after:w-full after:bg-black/60 after:content-[''] md:h-80"
+      className="relative grid h-56 grid-cols-6 bg-cover bg-center bg-no-repeat after:absolute after:h-full after:w-full after:bg-black/60 after:content-[''] max-md:-mx-4 md:h-80"
     >
       {/* float image */}
       {!!floatImage && (

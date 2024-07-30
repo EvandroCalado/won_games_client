@@ -1,16 +1,11 @@
 import { Meta, StoryFn } from '@storybook/react';
 import { Highlight, HighlightProps } from '.';
+import { mock } from './mock';
 
 export default {
   title: 'Components/Highlight',
   component: Highlight,
-  args: {
-    title: 'Read Dead it’s back',
-    subtitle: 'Come see John’s new adventures',
-    buttonLabel: 'Buy now',
-    buttonLink: '/games/defy-death',
-    backgroundImage: '/img/red-dead-img.jpg',
-  },
+  args: mock,
   parameters: {
     layout: 'fullscreen',
   },

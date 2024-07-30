@@ -8,7 +8,7 @@ const heading = tv({
   variants: {
     color: {
       white: 'text-white',
-      black: 'text-black',
+      black: 'text-white md:text-black',
     },
     lineLeft: {
       true: 'pl-2 border-l-4 border-l-secondary',

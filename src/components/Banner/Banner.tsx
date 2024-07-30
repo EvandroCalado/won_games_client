@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import { twMerge } from 'tailwind-merge';
 import { Button } from '../Button';
 import { Heading } from '../Heading';
 import { Ribbon } from '../Ribbon';
@@ -13,7 +12,6 @@ export type BannerProps = {
   ribbon?: string;
   ribbonSize?: 'sm' | 'md';
   ribbonColor?: 'primary' | 'secondary';
-  className?: string;
 };
 
 export const Banner: FC<BannerProps> = ({
@@ -25,10 +23,9 @@ export const Banner: FC<BannerProps> = ({
   ribbon,
   ribbonSize,
   ribbonColor,
-  className,
 }) => {
   return (
-    <div className={twMerge('relative shadow-lg', className)}>
+    <div className="relative md:mx-auto md:max-w-2xl lg:max-w-4xl xl:max-w-5xl">
       {/* corner ribbon */}
       {!!ribbon && (
         <Ribbon
@@ -44,14 +41,14 @@ export const Banner: FC<BannerProps> = ({
         style={{ backgroundImage: `url(${img})` }}
         role="img"
         aria-label={title}
-        className="h-56 w-full bg-lightGray bg-cover bg-center bg-no-repeat md:h-[580px]"
+        className="h-56 w-full bg-lightGray bg-cover bg-center bg-no-repeat md:h-[580px] md:rounded"
       ></div>
       {/* caption */}
-      <div className="w-full rounded-bl rounded-br p-6 max-md:bg-black/70 md:absolute md:bottom-0 md:left-0 md:bg-gradient-to-t md:from-black/90 md:via-black/80 md:to-black/0 md:p-10">
+      <div className="w-full rounded-bl rounded-br p-4 max-md:bg-black/70 md:absolute md:bottom-0 md:left-0 md:bg-gradient-to-t md:from-black/90 md:via-black/80 md:to-black/0 md:p-6">
         <Heading className="font-bold">{title}</Heading>
         <h3
           dangerouslySetInnerHTML={{ __html: subtitle }}
-          className="mb-2 text-sm text-white md:text-lg [&>p>strong]:text-primary"
+          className="mb-6 text-sm text-white md:text-lg [&>p>strong]:text-primary"
         ></h3>
         <Button size="lg" as="a" href={buttonLink}>
           {buttonLabel}

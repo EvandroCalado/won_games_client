@@ -26,7 +26,7 @@ export const Menu: FC<MenuProps> = ({ username }) => {
   const menuAnimaionStyles = `${isOpen ? 'translate-y-0' : 'translate-y-10 md:translate-y-0'}`;
 
   return (
-    <header className="relative flex items-center justify-between gap-8 py-4 transition-all">
+    <header className="relative mx-auto flex max-w-7xl items-center justify-between gap-8 px-4 py-14 transition-all">
       {/* menu mobile */}
       <IconMenu3
         className="cursor-pointer text-white md:hidden"
@@ -48,7 +48,7 @@ export const Menu: FC<MenuProps> = ({ username }) => {
         <Link href="/" className={linkStyles}>
           Home
         </Link>
-        <Link href="/" className={linkStyles}>
+        <Link href="/store" className={linkStyles}>
           Store
         </Link>
       </div>
@@ -64,7 +64,7 @@ export const Menu: FC<MenuProps> = ({ username }) => {
       {/* menu mobile */}
       <nav
         aria-hidden={!isOpen}
-        className={`absolute inset-0 flex h-screen flex-1 flex-col items-center justify-center gap-16 overflow-hidden bg-white transition-opacity duration-300 ${menuStyles}`}
+        className={`absolute inset-0 z-40 flex h-screen flex-1 flex-col items-center justify-center gap-16 overflow-hidden bg-white transition-opacity duration-300 ${menuStyles}`}
       >
         <IconX
           aria-label="close menu"

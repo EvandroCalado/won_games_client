@@ -6,6 +6,7 @@ body {
   @apply bg-mainBg dark:bg-white;
 }
 
+/* banner slider */
 .banner-slider .slick-dots {
   list-style: none;
   display: flex !important;
@@ -65,6 +66,7 @@ body {
   }
 }
 
+/* game card slider */
 .game-card-slider .slick-track,
 .game-card-slider .slick-list {
   display: flex;
@@ -77,7 +79,7 @@ body {
 }
 
 .game-card-slider .slick-list {
-  margin: 0 -8px;
+  margin: 0 !important;
 }
 
 .game-card-slider .slick-prev,
@@ -118,4 +120,30 @@ body {
 body .slick-prev::before,
 body .slick-next::before {
   display: none;
+}
+
+/* section white */
+@media (min-width: 768px) {
+  .section-white {
+    position: relative;
+    margin-top: -140px;
+    padding-top: 140px;
+    padding-bottom: 50px;
+    background-color: #fafafa;
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+  }
+}
+
+/* background footer */
+.bg-footer {
+  padding-top: 80px;
+  padding-bottom: 20px;
+  background-color: #fafafa;
+  clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0 100%);
+}
+
+@media (min-width: 768px) {
+  .bg-footer {
+    clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
+  }
 }

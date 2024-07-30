@@ -1,5 +1,7 @@
-import { Banner, BannerProps } from '@/components';
+'use client';
+
 import { FC } from 'react';
+import { Banner, BannerProps } from '../Banner';
 import { Slider, SliderSettings } from '../Slider';
 
 export type BannerSliderProps = {
@@ -25,14 +27,10 @@ export const settings: SliderSettings = {
 
 export const BannerSlider: FC<BannerSliderProps> = ({ items }) => {
   return (
-    <section className="banner-slider">
+    <section className="banner-slider relative z-10">
       <Slider settings={settings}>
         {items.map((item) => (
-          <Banner
-            key={item.title}
-            {...item}
-            className="md:mx-auto md:max-w-3xl"
-          />
+          <Banner key={item.title} {...item} />
         ))}
       </Slider>
     </section>
