@@ -2,7 +2,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import { Radio, RadioProps } from '.';
 
 export default {
-  title: 'Components/Radio',
+  title: 'Form/Radio',
   component: Radio,
   argTypes: {
     labelColor: {

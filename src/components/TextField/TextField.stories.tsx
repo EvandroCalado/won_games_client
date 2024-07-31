@@ -3,7 +3,7 @@ import { IconMail } from '@tabler/icons-react';
 import { TextField, TextFieldProps } from '.';
 
 export default {
-  title: 'Components/TextField',
+  title: 'Form/TextField',
   component: TextField,
   args: {
     label: '',
