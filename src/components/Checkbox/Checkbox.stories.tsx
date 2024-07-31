@@ -3,6 +3,7 @@ import { Checkbox, CheckboxProps } from '.';
 
 export default {
   title: 'Components/Checkbox',
+  component: Checkbox,
   args: {
     label: 'Checkbox',
     labelFor: 'check',
@@ -18,7 +19,6 @@ export default {
       action: 'checked',
     },
   },
-  component: Checkbox,
 } as Meta;
 
 export const Default: StoryFn<CheckboxProps> = (args) => <Checkbox {...args} />;

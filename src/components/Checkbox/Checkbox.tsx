@@ -29,7 +29,7 @@ const checkbox = tv({
   },
 
   defaultVariants: {
-    labelColor: 'black',
+    labelColor: 'white',
   },
 });
 

@@ -17,10 +17,10 @@ describe('Checkbox', () => {
     expect(screen.queryByLabelText('checkbox')).not.toBeInTheDocument();
   });
 
-  it('should render with black label by default', () => {
+  it('should render with white label by default', () => {
     render(<Checkbox label="test" labelFor="check" />);
 
-    expect(screen.getByText('test')).toHaveClass('text-black');
+    expect(screen.getByText('test')).toHaveClass('text-white');
   });
 
   it('should dispath onCkeck when status changes', async () => {
