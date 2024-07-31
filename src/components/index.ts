@@ -10,5 +10,7 @@ export * from './Heading';
 export * from './Highlight';
 export * from './Logo';
 export * from './Menu';
+export * from './Radio';
 export * from './Ribbon';
 export * from './Slider';
+export * from './TextField';
