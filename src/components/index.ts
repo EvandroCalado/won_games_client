@@ -1,6 +1,7 @@
 export * from './Banner';
 export * from './BannerSlider';
 export * from './Button';
+export * from './Checkbox';
 export * from './Container';
 export * from './Footer';
 export * from './GameCard';
