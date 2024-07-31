@@ -10,8 +10,8 @@ const radio = tv({
       'cursor-pointer flex items-center justify-center appearance-none w-5 h-5 border-2 border-solid border-primary bg-transparent rounded-full transition-all duration-150 relative outline-none',
       'before:content-[""] before:w-3 before:h-3 before:bg-primary before:absolute before:top-[1.5px] before:opacity-0 before:rounded-full before:transition-all before:duration-150',
       'checked:before:opacity-100',
-      'focus:shadow-[0_0_5px_0.5px_#8f8f8f] focus:shadow:opacity-10',
-      'hover:border-gray transition-all duration-150',
+      'focus:ring-2 focus:ring-primary',
+      'hover:ring-2 hover:ring-gray duration-150',
     ],
   },
 
