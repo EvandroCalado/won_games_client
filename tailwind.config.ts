@@ -24,6 +24,5 @@ const config: Config = {
     },
   },
   plugins: [],
-  tailwindFunctions: ['tv'],
 };
 export default config;
