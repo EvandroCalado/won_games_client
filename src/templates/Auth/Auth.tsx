@@ -8,11 +8,11 @@ export type AuthProps = {
 
 export const Auth: FC<AuthProps> = ({ title, children }) => {
   return (
-    <div className="grid h-screen grid-cols-2">
+    <div className="flex h-screen">
       {/* banner block */}
       <div
         style={{ backgroundImage: "url('/img/auth-bg.jpg')" }}
-        className="relative hidden flex-col items-center justify-center bg-cover bg-center after:absolute after:h-full after:w-full after:bg-black/60 md:flex"
+        className="relative hidden flex-1 flex-col items-center justify-center bg-cover bg-center after:absolute after:h-full after:w-full after:bg-black/60 md:flex"
       >
         <div className="relative z-10 flex h-full w-full flex-col justify-between px-12 py-8">
           <Logo />
@@ -33,9 +33,9 @@ export const Auth: FC<AuthProps> = ({ title, children }) => {
         </div>
       </div>
       {/* form block */}
-      <div className="flex flex-col items-center justify-center bg-white">
+      <div className="flex flex-1 flex-col items-center justify-center bg-white px-4">
         <div className="w-80">
-          <Logo color="black" size="large" className="mx-auto" />
+          <Logo color="black" size="lg" className="mx-auto" />
           <Heading as="h1" color="black" lineLeft className="mb-8 mt-12">
             {title}
           </Heading>

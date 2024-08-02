@@ -25,12 +25,12 @@ exports[`Highlight should render a snapshot 1`] = `
       class="col-span-4 items-end z-10 flex flex-col gap-2 p-4 text-right md:justify-end md:p-11"
     >
       <h4
-        class="text-2xl text-white font-bold md:text-3xl"
+        class="text-xl text-white font-bold md:text-3xl"
       >
         Heading 1
       </h4>
       <h6
-        class="text-2xl text-white font-light md:text-xl"
+        class="text-xl text-white font-light md:text-xl"
       >
         Heading 2
       </h6>

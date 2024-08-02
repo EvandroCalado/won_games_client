@@ -36,7 +36,7 @@ const heading = tv({
   },
 
   defaultVariants: {
-    size: '2xl',
+    size: 'xl',
     color: 'white',
     lineLeft: false,
     lineBottomPrimary: false,

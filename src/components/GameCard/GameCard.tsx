@@ -51,7 +51,7 @@ export const GameCard: FC<GameCardProps> = ({
           <Heading as="h3" color="black" className="font-bold">
             {title}
           </Heading>
-          <Heading as="h5" className="text-gray">
+          <Heading as="h5" size="sm" className="text-gray">
             {developer}
           </Heading>
         </Link>
