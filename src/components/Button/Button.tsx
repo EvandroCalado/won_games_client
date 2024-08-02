@@ -1,5 +1,4 @@
 import { cn } from '@/utils/cn';
-import { cva, type VariantProps } from 'class-variance-authority';
 import {
   AnchorHTMLAttributes,
   ButtonHTMLAttributes,
@@ -7,12 +6,15 @@ import {
   FC,
   ReactNode,
 } from 'react';
+import { tv, VariantProps } from 'tailwind-variants';
 
-const button = cva('flex items-center justify-center gap-2 rounded w-max', {
+const button = tv({
+  base: 'flex items-center justify-center gap-2 rounded w-max focus:ring-2 focus:ring-primary outline-none',
+
   variants: {
     variant: {
       primary:
-        'bg-gradient-to-b from-red to-primary p-2 text-white duration-150 hover:bg-gradient-to-b hover:from-red/95 hover:to-primary/95 active:bg-gradient-to-b active:from-red/80 active:to-primary/80',
+        'bg-gradient-to-b from-red to-primary p-2 text-white duration-150 hover:bg-gradient-to-b hover:from-red/95 hover:to-primary/95 active:bg-gradient-to-b active:from-red/80 active:to-primary/80 ',
       ghost: 'p-2 duration-150 text-primary hover:bg-lightBg active:bg-white',
     },
     size: {
