@@ -5,7 +5,7 @@ export default {
   title: 'Components/Logo',
   args: {
     color: 'black',
-    size: 'normal',
+    size: 'md',
     hideOnMobile: false,
   },
   argTypes: {
@@ -28,7 +28,7 @@ export const Default: StoryFn<LogoProps> = (args) => <Logo {...args} />;
 export const Large: StoryFn<LogoProps> = (args) => <Logo {...args} />;
 
 Large.args = {
-  size: 'large',
+  size: 'md',
 };
 
 export const Mobile: StoryFn<LogoProps> = (args) => <Logo {...args} />;

@@ -27,7 +27,7 @@ describe('Logo', () => {
   });
 
   it('should render a bigger logo', () => {
-    render(<Logo size="large" />);
+    render(<Logo size="lg" />);
 
     expect(screen.getByLabelText(/won games/i).parentElement).toHaveClass(
       'w-52 h-14',
