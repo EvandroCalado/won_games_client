@@ -4,6 +4,9 @@ import { Radio, RadioProps } from '.';
 export default {
   title: 'Form/Radio',
   component: Radio,
+  args: {
+    labelColor: 'black',
+  },
   argTypes: {
     labelColor: {
       options: ['white', 'black'],
