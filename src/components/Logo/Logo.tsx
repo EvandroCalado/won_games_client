@@ -58,7 +58,7 @@ export const Logo: FC<LogoProps> = ({
   });
 
   return (
-    <div className={cn(className, logoStyles())}>
+    <div className={cn(logoStyles(), className)}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

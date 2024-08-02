@@ -10,11 +10,13 @@ export default {
   },
   argTypes: {
     color: {
+      options: ['white', 'black'],
       control: {
         type: 'inline-radio',
       },
     },
     size: {
+      options: ['md', 'lg'],
       control: {
         type: 'inline-radio',
       },
