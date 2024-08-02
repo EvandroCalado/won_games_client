@@ -22,15 +22,7 @@ export default {
   },
 } as Meta;
 
-export const Default: StoryFn<CheckboxProps> = (args) => <Checkbox {...args} />;
-
-export const Cheked: StoryFn<CheckboxProps> = (args) => <Checkbox {...args} />;
-
-Cheked.args = {
-  isCheked: true,
-};
-
-export const Group: StoryFn<CheckboxProps> = (args) => (
+export const Default: StoryFn<CheckboxProps> = (args) => (
   <div className="space-y-4">
     <div>
       <Checkbox
