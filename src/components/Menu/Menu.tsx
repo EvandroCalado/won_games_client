@@ -8,9 +8,45 @@ import {
 } from '@tabler/icons-react';
 import Link from 'next/link';
 import { FC, useState } from 'react';
-import { twMerge } from 'tailwind-merge';
+import { tv } from 'tailwind-variants';
 import { Button } from '../Button';
 import { Logo } from '../Logo';
+
+const menu = tv({
+  slots: {
+    menuStyles:
+      'absolute inset-0 z-40 flex h-screen flex-1 flex-col items-center justify-center gap-16 overflow-hidden bg-white transition-opacity duration-300',
+    linkStyles:
+      'after-border-secondary relative w-max text-center text-xl font-bold text-black after:absolute after:-bottom-1 after:left-1/2 after:w-0 after:border-b-2 after:border-primary after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full',
+    menuAnimaionDesktopStyles:
+      'hidden items-center gap-4 transition-all duration-300 md:flex [&>a]:text-lg [&>a]:font-medium [&>a]:text-white',
+    menuAnimaionMobileStyles:
+      'flex flex-col items-center justify-between gap-4 transition-all duration-300',
+    menuAnimaionLoginStyles:
+      'flex w-full flex-col items-center gap-4 px-12 transition-all duration-300',
+  },
+
+  variants: {
+    isOpen: {
+      true: {
+        menuStyles: 'opacity-100 pointer-events-auto',
+        menuAnimaionDesktopStyles: 'translate-y-0',
+        menuAnimaionMobileStyles: 'translate-y-0',
+        menuAnimaionLoginStyles: 'translate-y-0',
+      },
+      false: {
+        menuStyles: 'opacity-0 pointer-events-none',
+        menuAnimaionDesktopStyles: 'translate-y-10 md:translate-y-0',
+        menuAnimaionMobileStyles: 'translate-y-10 md:translate-y-0',
+        menuAnimaionLoginStyles: 'translate-y-10 md:translate-y-0',
+      },
+    },
+  },
+
+  defaultVariants: {
+    isOpen: false,
+  },
+});
 
 export type MenuProps = {
   username?: string;
@@ -20,10 +56,13 @@ export const Menu: FC<MenuProps> = ({ username }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   // styles
-  const menuStyles = `${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`;
-  const linkStyles =
-    'after-border-secondary relative w-max text-center text-xl font-bold text-black after:absolute after:-bottom-1 after:left-1/2 after:w-0 after:border-b-2 after:border-primary after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full';
-  const menuAnimaionStyles = `${isOpen ? 'translate-y-0' : 'translate-y-10 md:translate-y-0'}`;
+  const {
+    menuStyles,
+    linkStyles,
+    menuAnimaionDesktopStyles,
+    menuAnimaionMobileStyles,
+    menuAnimaionLoginStyles,
+  } = menu({ isOpen });
 
   return (
     <header className="relative mx-auto flex max-w-7xl items-center justify-between gap-8 px-4 py-14 transition-all">
@@ -39,16 +78,11 @@ export const Menu: FC<MenuProps> = ({ username }) => {
         className="max-md:absolute max-md:left-1/2 max-md:-translate-x-1/2"
       />
       {/* nav links desktop */}
-      <div
-        className={twMerge(
-          'hidden items-center gap-4 transition-all duration-300 md:flex [&>a]:text-lg [&>a]:font-medium [&>a]:text-white',
-          menuAnimaionStyles,
-        )}
-      >
-        <Link href="/" className={linkStyles}>
+      <div className={menuAnimaionDesktopStyles()}>
+        <Link href="/" className={linkStyles()}>
           Home
         </Link>
-        <Link href="/store" className={linkStyles}>
+        <Link href="/store" className={linkStyles()}>
           Store
         </Link>
       </div>
@@ -62,36 +96,28 @@ export const Menu: FC<MenuProps> = ({ username }) => {
         {!username && <Button className="hidden md:block">Sign in</Button>}
       </div>
       {/* menu mobile */}
-      <nav
-        aria-hidden={!isOpen}
-        className={`absolute inset-0 z-40 flex h-screen flex-1 flex-col items-center justify-center gap-16 overflow-hidden bg-white transition-opacity duration-300 ${menuStyles}`}
-      >
+      <nav aria-hidden={!isOpen} className={menuStyles()}>
         <IconX
           aria-label="close menu"
           onClick={() => setIsOpen(false)}
           className="absolute right-0 top-0 m-4 cursor-pointer"
         />
         {/* nav links mobile */}
-        <div
-          className={twMerge(
-            'flex flex-col items-center justify-between gap-4 transition-all duration-300',
-            menuAnimaionStyles,
-          )}
-        >
-          <Link href="/" className={linkStyles}>
+        <div className={menuAnimaionMobileStyles()}>
+          <Link href="/" className={linkStyles()}>
             Home
           </Link>
-          <Link href="/" className={linkStyles}>
+          <Link href="/" className={linkStyles()}>
             Store
           </Link>
 
           {!!username && (
             <>
-              <Link href="/" className={linkStyles}>
+              <Link href="/" className={linkStyles()}>
                 My account
               </Link>
 
-              <Link href="/" className={linkStyles}>
+              <Link href="/" className={linkStyles()}>
                 Wishlist
               </Link>
             </>
@@ -99,12 +125,7 @@ export const Menu: FC<MenuProps> = ({ username }) => {
         </div>
         {/* login or sign up */}
         {!username && (
-          <div
-            className={twMerge(
-              'flex w-full flex-col items-center gap-4 px-12 transition-all duration-300',
-              menuAnimaionStyles,
-            )}
-          >
+          <div className={menuAnimaionLoginStyles()}>
             <Button size="lg" className="w-full">
               Log in now
             </Button>
