@@ -1,5 +1,5 @@
+import { cn } from '@/utils/cn';
 import { FC, ReactNode } from 'react';
-import { twMerge } from 'tailwind-merge';
 import { tv, VariantProps } from 'tailwind-variants';
 
 const ribbon = tv({
@@ -51,7 +51,7 @@ export const Ribbon: FC<RibbonProps> = ({
   const { container, tail } = ribbon({ color, size });
 
   return (
-    <div className={twMerge(container(), className)}>
+    <div className={cn(container(), className)}>
       <span className={tail()}></span>
       {children}
     </div>
