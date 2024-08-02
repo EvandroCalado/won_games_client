@@ -1,3 +1,5 @@
+import { cn } from '@/utils/cn';
+import { cva, type VariantProps } from 'class-variance-authority';
 import {
   AnchorHTMLAttributes,
   ButtonHTMLAttributes,
@@ -5,23 +7,8 @@ import {
   FC,
   ReactNode,
 } from 'react';
-import { twMerge } from 'tailwind-merge';
-import { tv, VariantProps } from 'tailwind-variants';
 
-type ButtonTypes =
-  | ButtonHTMLAttributes<HTMLButtonElement>
-  | AnchorHTMLAttributes<HTMLAnchorElement>;
-
-export type ButtonProps = {
-  icon?: ReactNode;
-  as?: ElementType;
-  className?: string;
-} & ButtonTypes &
-  VariantProps<typeof button>;
-
-const button = tv({
-  base: `flex items-center justify-center gap-2 rounded w-max`,
-
+const button = cva('flex items-center justify-center gap-2 rounded w-max', {
   variants: {
     variant: {
       primary:
@@ -41,6 +28,16 @@ const button = tv({
   },
 });
 
+type ButtonTypes =
+  | ButtonHTMLAttributes<HTMLButtonElement>
+  | AnchorHTMLAttributes<HTMLAnchorElement>;
+
+export type ButtonProps = {
+  icon?: ReactNode;
+  as?: ElementType;
+} & ButtonTypes &
+  VariantProps<typeof button>;
+
 export const Button: FC<ButtonProps> = ({
   children,
   variant,
@@ -53,10 +50,7 @@ export const Button: FC<ButtonProps> = ({
   const Element = as;
 
   return (
-    <Element
-      className={twMerge(button({ size, variant }), className)}
-      {...props}
-    >
+    <Element className={cn(button({ className, size, variant }))} {...props}>
       {!!icon && icon}
       {!!children && children}
     </Element>
