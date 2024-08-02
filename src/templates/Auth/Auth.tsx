@@ -34,7 +34,7 @@ export const Auth: FC<AuthProps> = ({ title, children }) => {
       </div>
       {/* form block */}
       <div className="flex flex-1 flex-col items-center justify-center bg-white px-4">
-        <div className="w-80">
+        <div className="w-80 md:w-96">
           <Logo color="black" size="lg" className="mx-auto" />
           <Heading as="h1" color="black" lineLeft className="mb-8 mt-12">
             {title}
