@@ -6,6 +6,8 @@ export type AuthProps = {
   children: ReactNode;
 };
 
+const date = new Date().getFullYear();
+
 export const Auth: FC<AuthProps> = ({ title, children }) => {
   return (
     <div className="flex h-screen">
@@ -28,14 +30,14 @@ export const Auth: FC<AuthProps> = ({ title, children }) => {
           </div>
 
           <p className="text-center text-white">
-            Won Games 2020 © Todos os Direitos Reservados
+            Won Games {date} © Todos os Direitos Reservados
           </p>
         </div>
       </div>
       {/* form block */}
       <div className="flex flex-1 flex-col items-center justify-center bg-white px-4">
         <div className="w-80 md:w-96">
-          <Logo color="black" size="lg" className="mx-auto" />
+          <Logo id="content" color="black" size="lg" className="mx-auto" />
           <Heading as="h1" color="black" lineLeft className="mb-8 mt-12">
             {title}
           </Heading>
