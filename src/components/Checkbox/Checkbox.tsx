@@ -5,6 +5,7 @@ import { tv, VariantProps } from 'tailwind-variants';
 
 const checkbox = tv({
   slots: {
+    containerStyles: 'flex items-center gap-2',
     labelStyles: 'cursor-pointer leading-4',
     inputStyles: [
       'cursor-pointer flex items-center justify-center appearance-none w-5 h-5 border-2 border-solid border-darkGray rounded transition-all duration-150 relative outline-none',
@@ -53,7 +54,9 @@ export const Checkbox: FC<CheckboxProps> = ({
 }) => {
   const [checked, setChecked] = useState(isCheked);
 
-  const { labelStyles, inputStyles } = checkbox({ labelColor });
+  const { containerStyles, labelStyles, inputStyles } = checkbox({
+    labelColor,
+  });
 
   const onChange = () => {
     const status = !checked;
@@ -63,7 +66,7 @@ export const Checkbox: FC<CheckboxProps> = ({
   };
 
   return (
-    <div className="flex items-center gap-2">
+    <div className={containerStyles()}>
       <input
         id={labelFor}
         type="checkbox"

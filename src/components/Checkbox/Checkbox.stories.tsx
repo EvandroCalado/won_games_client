@@ -7,6 +7,7 @@ export default {
   args: {
     label: 'Checkbox',
     labelFor: 'check',
+    labelColor: 'black',
   },
   argTypes: {
     labelColor: {
