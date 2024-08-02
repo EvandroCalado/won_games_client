@@ -1,8 +1,10 @@
 import { cn } from '@/utils/cn';
-import { cva, type VariantProps } from 'class-variance-authority';
 import { ElementType, FC, ReactNode } from 'react';
+import { tv, VariantProps } from 'tailwind-variants';
 
-const heading = cva('text-2xl md:text-3xl', {
+const heading = tv({
+  base: 'text-2xl md:text-3xl',
+
   variants: {
     size: {
       sm: 'text-sm md:text-base',
@@ -58,7 +60,7 @@ export const Heading: FC<HeadingProps> = ({
   as = 'h2',
   className,
 }) => {
-  // transform as a element component
+  // transform 'as' a element component
   const Element = as;
 
   return (
