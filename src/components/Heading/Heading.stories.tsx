@@ -6,11 +6,9 @@ export default {
   component: Heading,
   args: {
     children: 'Most Populars',
-    color: 'black',
     lineLeft: false,
     lineBottomPrimary: false,
     lineBottomSecondary: false,
-    as: 'h2',
     className: '',
   },
   argTypes: {
@@ -35,6 +33,10 @@ export default {
 
 export const Default: StoryFn<HeadingProps> = (args) => <Heading {...args} />;
 
+Default.args = {
+  color: 'black',
+};
+
 export const WithLineLeft: StoryFn<HeadingProps> = (args) => (
   <div className="space-y-2">
     <Heading {...args} as="h1" />
@@ -47,6 +49,7 @@ export const WithLineLeft: StoryFn<HeadingProps> = (args) => (
 );
 
 WithLineLeft.args = {
+  color: 'black',
   lineLeft: true,
 };
 
@@ -62,6 +65,7 @@ export const WithLineBottomPrimary: StoryFn<HeadingProps> = (args) => (
 );
 
 WithLineBottomPrimary.args = {
+  color: 'black',
   lineBottomPrimary: true,
 };
 
@@ -77,5 +81,6 @@ export const WithLineBottomSecondary: StoryFn<HeadingProps> = (args) => (
 );
 
 WithLineBottomSecondary.args = {
+  color: 'black',
   lineBottomSecondary: true,
 };

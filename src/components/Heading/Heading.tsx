@@ -1,10 +1,8 @@
+import { cn } from '@/utils/cn';
+import { cva, type VariantProps } from 'class-variance-authority';
 import { ElementType, FC, ReactNode } from 'react';
-import { twMerge } from 'tailwind-merge';
-import { tv, VariantProps } from 'tailwind-variants';
 
-const heading = tv({
-  base: 'text-2xl md:text-3xl',
-
+const heading = cva('text-2xl md:text-3xl', {
   variants: {
     size: {
       sm: 'text-sm md:text-base',
@@ -22,16 +20,16 @@ const heading = tv({
     },
     color: {
       white: 'text-white font-semibold',
-      black: 'text-white md:text-black font-semibold block',
+      black: 'text-black font-semibold',
     },
     lineLeft: {
       true: 'pl-2 border-l-4 border-l-secondary',
     },
     lineBottomPrimary: {
-      true: 'relative after:border-b-4 after:border-b-primary after:absolute after:left-0 after:-bottom-1 after:w-1/5',
+      true: 'relative after:border-b-4 after:border-b-primary after:absolute after:left-0 after:-bottom-1 after:w-[5%]',
     },
     lineBottomSecondary: {
-      true: 'relative after:border-b-4 after:border-b-secondary after:absolute after:left-0 after:-bottom-1 after:w-1/5',
+      true: 'relative after:border-b-4 after:border-b-secondary after:absolute after:left-0 after:-bottom-1 after:w-[5%]',
     },
   },
 
@@ -53,7 +51,7 @@ export type HeadingProps = {
 export const Heading: FC<HeadingProps> = ({
   children,
   size,
-  color = 'white',
+  color,
   lineLeft = false,
   lineBottomPrimary = false,
   lineBottomSecondary = false,
@@ -65,15 +63,15 @@ export const Heading: FC<HeadingProps> = ({
 
   return (
     <Element
-      className={twMerge(
+      className={cn(
         heading({
+          className,
           size,
           color,
           lineLeft,
           lineBottomPrimary,
           lineBottomSecondary,
         }),
-        className,
       )}
     >
       {children}
