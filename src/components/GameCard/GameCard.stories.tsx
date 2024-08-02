@@ -3,6 +3,7 @@ import { GameCard, GameCardProps } from '.';
 
 export default {
   title: 'Components/GameCard',
+  component: GameCard,
   args: {
     title: 'Population Zero',
     developer: 'Other Ocean',
@@ -18,7 +19,6 @@ export default {
       action: 'clicked',
     },
   },
-  component: GameCard,
 } as Meta;
 
 export const Default: StoryFn<GameCardProps> = (args) => (

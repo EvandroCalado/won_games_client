@@ -3,6 +3,7 @@ import { Slider, SliderProps } from '.';
 
 export default {
   title: 'Components/Slider',
+  component: Slider,
   args: {
     children: [
       <div
@@ -37,7 +38,6 @@ export default {
     },
     children: { type: 'function' },
   },
-  component: Slider,
 } as Meta;
 
 export const Horizontal: StoryFn<SliderProps> = (args) => <Slider {...args} />;

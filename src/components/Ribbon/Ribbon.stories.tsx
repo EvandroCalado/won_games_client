@@ -3,6 +3,7 @@ import { Ribbon, RibbonProps } from '.';
 
 export default {
   title: 'Components/Ribbon',
+  component: Ribbon,
   args: {
     children: 'Best Seller',
     color: 'primary',
@@ -23,7 +24,6 @@ export default {
       },
     },
   },
-  component: Ribbon,
 } as Meta;
 
 export const Default: StoryFn<RibbonProps> = (args) => (

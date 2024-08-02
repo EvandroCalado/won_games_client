@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-mainBg dark:bg-white;
+  @apply bg-mainBg;
 }
 
 /* banner slider */

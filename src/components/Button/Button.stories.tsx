@@ -4,6 +4,7 @@ import { Button, ButtonProps } from '.';
 
 export default {
   title: 'Components/Button',
+  component: Button,
   args: {
     variant: 'primary',
     size: 'md',
@@ -33,7 +34,6 @@ export default {
       },
     },
   },
-  component: Button,
 } as Meta;
 
 export const Default: StoryFn<ButtonProps> = (args) => (

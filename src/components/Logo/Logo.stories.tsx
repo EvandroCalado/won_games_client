@@ -3,6 +3,7 @@ import { Logo, LogoProps } from '.';
 
 export default {
   title: 'Components/Logo',
+  component: Logo,
   args: {
     color: 'black',
     size: 'md',
@@ -22,7 +23,6 @@ export default {
       },
     },
   },
-  component: Logo,
 } as Meta;
 
 export const Default: StoryFn<LogoProps> = (args) => <Logo {...args} />;
