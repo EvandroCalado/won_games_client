@@ -4,6 +4,8 @@ export * from './Button';
 export * from './Checkbox';
 export * from './Container';
 export * from './Footer';
+export * from './FormSignIn';
+export * from './FormSignUp';
 export * from './GameCard';
 export * from './GameCardSlider';
 export * from './Heading';
