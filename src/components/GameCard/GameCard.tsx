@@ -33,7 +33,7 @@ export const GameCard: FC<GameCardProps> = ({
   ribbonSize = 'sm',
 }) => {
   return (
-    <article className="relative flex h-full w-full flex-col bg-white">
+    <article className="relative flex h-full w-full flex-col border-2 border-lightGray bg-white">
       {/* corner ribbon */}
       {!!ribbon && (
         <Ribbon color={ribbonColor} size={ribbonSize}>
