@@ -33,7 +33,7 @@ describe('Menu', () => {
   it('should show login or sign up buttons when user is logged out', () => {
     render(<Menu />);
 
-    expect(screen.getByText(/log in now/i)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /sign in/i })).toBeInTheDocument();
     expect(screen.getByText(/sign up/i)).toBeInTheDocument();
   });
 

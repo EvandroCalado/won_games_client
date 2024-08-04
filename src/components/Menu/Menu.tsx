@@ -93,7 +93,11 @@ export const Menu: FC<MenuProps> = ({ username }) => {
           className="cursor-pointer text-white"
           aria-label="open shopping cart"
         />
-        {!username && <Button className="hidden md:block">Sign in</Button>}
+        {!username && (
+          <Button className="max-md:hidden" as="a" href="/sign-in">
+            Sign in
+          </Button>
+        )}
       </div>
       {/* menu mobile */}
       <nav aria-hidden={!isOpen} className={menuStyles()}>
@@ -126,8 +130,8 @@ export const Menu: FC<MenuProps> = ({ username }) => {
         {/* login or sign up */}
         {!username && (
           <div className={menuAnimaionLoginStyles()}>
-            <Button size="lg" className="w-full">
-              Log in now
+            <Button size="lg" className="w-full" as="a" href="/sign-in">
+              Sign in
             </Button>
 
             <span className="relative my-2 block bg-white px-0.5 text-xs">
@@ -136,7 +140,7 @@ export const Menu: FC<MenuProps> = ({ username }) => {
             </span>
 
             <Link
-              href="/signup"
+              href="/sign-up"
               className="border-b-2 border-primary text-sm text-primary hover:border-primary/80 hover:text-primary/80"
             >
               Sign up
