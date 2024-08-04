@@ -128,7 +128,7 @@ body .slick-next::before {
   position: relative;
   margin-top: -140px;
   padding-top: 140px;
-  padding-bottom: 50px;
+  padding-bottom: 70px;
   background-color: #fafafa;
   clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
 }
