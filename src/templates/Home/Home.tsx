@@ -4,11 +4,9 @@ import {
   Container,
   Footer,
   GameCardProps,
-  GameCardSlider,
-  Heading,
-  Highlight,
   HighlightProps,
   Menu,
+  Showcase,
 } from '@/components';
 import { FC } from 'react';
 
@@ -38,43 +36,35 @@ export const Home: FC<HomeProps> = ({
   return (
     <main>
       <Menu />
+
       <Container>
         <BannerSlider items={banners} />
       </Container>
 
-      <section className="section-white">
-        <Container>
-          <Heading lineLeft color="black" className="mb-8">
-            News
-          </Heading>
-          <GameCardSlider items={newGames} color="black" />
-        </Container>
-      </section>
+      {/* news */}
+      <Showcase title="News" games={newGames} isSectionWhite />
 
-      <Container>
-        <Heading lineLeft className="mb-8">
-          Most popular
-        </Heading>
-        <Highlight {...mostPopularHighlight} />
-        <GameCardSlider items={mostPopularGames} />
-      </Container>
+      {/* most popular */}
+      <Showcase
+        title="Most Popular"
+        highlight={mostPopularHighlight}
+        games={mostPopularGames}
+      />
 
-      <Container>
-        <Heading lineLeft className="mb-8">
-          Up coming
-        </Heading>
-        <GameCardSlider items={upComingGames} />
-        <Highlight {...upComingHighlight} alignment="left" />
-        <GameCardSlider items={upComingMoreGames} />
-      </Container>
+      {/* up comming     */}
+      <Showcase title="Up coming" games={upComingGames} />
+      <Showcase
+        highlight={upComingHighlight}
+        games={upComingMoreGames}
+        alignment="left"
+      />
 
-      <Container>
-        <Heading lineLeft className="mb-8">
-          Free games
-        </Heading>
-        <Highlight {...freeHighlight} />
-        <GameCardSlider items={freeGames} />
-      </Container>
+      {/* free games */}
+      <Showcase
+        title="Free games"
+        highlight={freeHighlight}
+        games={freeGames}
+      />
 
       <Footer />
     </main>

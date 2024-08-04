@@ -16,30 +16,49 @@ const props = {
   freeGames: [Slides[0]],
 };
 
+jest.mock('@/components/Menu', () => {
+  return {
+    __esModule: true,
+    Menu: function Mock() {
+      return <div data-testid="Mock menu"></div>;
+    },
+  };
+});
+
+jest.mock('@/components/Footer', () => {
+  return {
+    __esModule: true,
+    Footer: function Mock() {
+      return <div data-testid="Mock footer"></div>;
+    },
+  };
+});
+
+jest.mock('@/components/Showcase', () => {
+  return {
+    __esModule: true,
+    Showcase: function Mock() {
+      return <div data-testid="Mock showcase"></div>;
+    },
+  };
+});
+
+jest.mock('@/components/BannerSlider', () => {
+  return {
+    __esModule: true,
+    BannerSlider: function Mock() {
+      return <div data-testid="Mock bannerSlider"></div>;
+    },
+  };
+});
+
 describe('Home', () => {
   it('should render header and footer', () => {
     render(<Home {...props} />);
 
-    expect(screen.getByLabelText(/open menu/i)).toBeInTheDocument();
-    expect(
-      screen.getByRole('heading', { name: /contact/i }),
-    ).toBeInTheDocument();
-
-    expect(
-      screen.getByRole('heading', { name: /News/i, level: 2 }),
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole('heading', { name: /Most popular/i, level: 2 }),
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole('heading', { name: /Up coming/i, level: 2 }),
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole('heading', { name: /Free games/i, level: 2 }),
-    ).toBeInTheDocument();
-
-    expect(screen.getAllByText(/defy death 1/i)).toHaveLength(1);
-    expect(screen.getAllByText(/population zero/i)).toHaveLength(5);
-    expect(screen.getAllByText(/read dead/i)).toHaveLength(3);
+    expect(screen.getByTestId(/mock menu/i)).toBeInTheDocument();
+    expect(screen.getByTestId(/mock bannerSlider/i)).toBeInTheDocument();
+    expect(screen.getByTestId(/mock footer/i)).toBeInTheDocument();
+    expect(screen.getAllByTestId(/mock showcase/i)).toHaveLength(5);
   });
 });
