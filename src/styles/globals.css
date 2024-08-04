@@ -70,10 +70,11 @@ body {
 .game-card-slider .slick-track,
 .game-card-slider .slick-list {
   display: flex;
+  gap: 8px;
 }
 
 .game-card-slider .slick-slide > div {
-  margin: 0 8px;
+  /* margin: 0 8px; */
   flex: 1 0 auto;
   height: 100%;
 }
@@ -123,15 +124,13 @@ body .slick-next::before {
 }
 
 /* section white */
-@media (min-width: 768px) {
-  .section-white {
-    position: relative;
-    margin-top: -140px;
-    padding-top: 140px;
-    padding-bottom: 50px;
-    background-color: #fafafa;
-    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
-  }
+.section-white {
+  position: relative;
+  margin-top: -140px;
+  padding-top: 140px;
+  padding-bottom: 50px;
+  background-color: #fafafa;
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
 }
 
 /* background footer */

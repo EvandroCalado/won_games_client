@@ -83,7 +83,9 @@ export const GameCardSlider: FC<GameCardSliderProps> = ({
   };
 
   return (
-    <section className={`game-card-slider text-${color} my-10 max-2xl:-mr-4`}>
+    <section
+      className={`game-card-slider text-${color} my-10 -ml-3 -mr-4 md:-ml-2 md:-mr-4 2xl:-mx-[6px]`}
+    >
       <Slider settings={settings}>
         {items.map((item, index) => (
           <GameCard key={item.title + index} {...item} />
