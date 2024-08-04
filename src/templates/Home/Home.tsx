@@ -2,13 +2,12 @@ import {
   BannerProps,
   BannerSlider,
   Container,
-  Footer,
   GameCardProps,
   HighlightProps,
-  Menu,
   Showcase,
 } from '@/components';
 import { FC } from 'react';
+import { Base } from '../Base';
 
 export type HomeProps = {
   banners: BannerProps[];
@@ -34,39 +33,38 @@ export const Home: FC<HomeProps> = ({
   freeGames,
 }) => {
   return (
-    <main>
-      <Menu />
+    <Base>
+      <main>
+        {/* banner */}
+        <Container>
+          <BannerSlider items={banners} />
+        </Container>
 
-      <Container>
-        <BannerSlider items={banners} />
-      </Container>
+        {/* news */}
+        <Showcase title="News" games={newGames} isSectionWhite />
 
-      {/* news */}
-      <Showcase title="News" games={newGames} isSectionWhite />
+        {/* most popular */}
+        <Showcase
+          title="Most Popular"
+          highlight={mostPopularHighlight}
+          games={mostPopularGames}
+        />
 
-      {/* most popular */}
-      <Showcase
-        title="Most Popular"
-        highlight={mostPopularHighlight}
-        games={mostPopularGames}
-      />
+        {/* up comming     */}
+        <Showcase title="Up coming" games={upComingGames} />
+        <Showcase
+          highlight={upComingHighlight}
+          games={upComingMoreGames}
+          alignment="left"
+        />
 
-      {/* up comming     */}
-      <Showcase title="Up coming" games={upComingGames} />
-      <Showcase
-        highlight={upComingHighlight}
-        games={upComingMoreGames}
-        alignment="left"
-      />
-
-      {/* free games */}
-      <Showcase
-        title="Free games"
-        highlight={freeHighlight}
-        games={freeGames}
-      />
-
-      <Footer />
-    </main>
+        {/* free games */}
+        <Showcase
+          title="Free games"
+          highlight={freeHighlight}
+          games={freeGames}
+        />
+      </main>
+    </Base>
   );
 };
