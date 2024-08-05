@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameInfo should render a snapshot 1`] = `
+<div>
+  <div
+    class="relative space-y-4 bg-white p-4"
+  >
+    <div
+      class="flex items-center font-bold text-white bg-secondary h-9 text-sm py-2 px-4 absolute -right-4 top-2 z-10 max-md:right-4 max-md:top-8"
+    >
+      <span
+        class="max-md:hidden absolute right-0 border-solid border-t-[#2E8379] border-r-transparent border-r-[16px] border-t-[6px] -bottom-[6px]"
+      />
+      $210.00
+    </div>
+    <h2
+      class="text-3xl md:text-4xl text-black font-semibold relative after:border-b-4 after:border-b-primary after:absolute after:left-0 after:-bottom-1 after:w-[10%] after:md:w-[5%]"
+    >
+      GameInfo
+    </h2>
+    <p
+      class="md:w-3/4"
+    >
+      Description
+    </p>
+    <div
+      class="flex flex-col gap-2 md:flex-row-reverse"
+    >
+      <button
+        class="flex items-center justify-center gap-2 rounded w-max focus:ring-2 focus:ring-primary outline-none bg-gradient-to-b from-red to-primary p-2 text-white duration-150 hover:bg-gradient-to-b hover:from-red/95 hover:to-primary/95 active:bg-gradient-to-b active:from-red/80 active:to-primary/80 text-sm h-10 px-8 [&>svg]:w-5 [&>svg]:h-5 max-md:w-full"
+      >
+        <svg
+          class="tabler-icon tabler-icon-shopping-cart-plus "
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"
+          />
+          <path
+            d="M12.5 17h-6.5v-14h-2"
+          />
+          <path
+            d="M6 5l14 1l-.86 6.017m-2.64 .983h-10.5"
+          />
+          <path
+            d="M16 19h6"
+          />
+          <path
+            d="M19 16v6"
+          />
+        </svg>
+        Add to cart
+      </button>
+      <button
+        class="flex items-center justify-center gap-2 rounded w-max focus:ring-2 focus:ring-primary outline-none p-2 duration-150 text-primary hover:bg-lightBg active:bg-white text-sm h-10 px-8 [&>svg]:w-5 [&>svg]:h-5 max-md:w-full"
+      >
+        <svg
+          class="tabler-icon tabler-icon-heart "
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"
+          />
+        </svg>
+        Wishlist
+      </button>
+    </div>
+  </div>
+</div>
+`;

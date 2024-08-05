@@ -8,6 +8,7 @@ export * from './FormSignIn';
 export * from './FormSignUp';
 export * from './GameCard';
 export * from './GameCardSlider';
+export * from './GameInfo';
 export * from './Heading';
 export * from './Highlight';
 export * from './Logo';
