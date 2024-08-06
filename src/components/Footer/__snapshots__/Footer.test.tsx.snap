@@ -104,7 +104,7 @@ exports[`Footer should render a footer snapshot 1`] = `
     >
       <div>
         <h3
-          class="text-xl md:text-2xl text-black font-semibold relative after:border-b-4 after:border-b-secondary after:absolute after:left-0 after:-bottom-1 after:w-[10%] after:md:w-[5%] mb-8 uppercase"
+          class="text-xl md:text-2xl text-black font-semibold relative after:border-b-4 after:border-b-secondary after:absolute after:left-0 after:-bottom-1 after:w-8 mb-8 uppercase"
         >
           Contact
         </h3>
@@ -119,7 +119,7 @@ exports[`Footer should render a footer snapshot 1`] = `
         aria-label="social-media"
       >
         <h3
-          class="text-xl md:text-2xl text-black font-semibold relative after:border-b-4 after:border-b-secondary after:absolute after:left-0 after:-bottom-1 after:w-[10%] after:md:w-[5%] mb-8 uppercase"
+          class="text-xl md:text-2xl text-black font-semibold relative after:border-b-4 after:border-b-secondary after:absolute after:left-0 after:-bottom-1 after:w-8 mb-8 uppercase"
         >
           Follow us
         </h3>
@@ -162,7 +162,7 @@ exports[`Footer should render a footer snapshot 1`] = `
         aria-labelledby="resources"
       >
         <h3
-          class="text-xl md:text-2xl text-black font-semibold relative after:border-b-4 after:border-b-secondary after:absolute after:left-0 after:-bottom-1 after:w-[10%] after:md:w-[5%] mb-8 uppercase"
+          class="text-xl md:text-2xl text-black font-semibold relative after:border-b-4 after:border-b-secondary after:absolute after:left-0 after:-bottom-1 after:w-8 mb-8 uppercase"
         >
           Links
         </h3>
@@ -191,7 +191,7 @@ exports[`Footer should render a footer snapshot 1`] = `
         aria-label="contact"
       >
         <h3
-          class="text-xl md:text-2xl text-black font-semibold relative after:border-b-4 after:border-b-secondary after:absolute after:left-0 after:-bottom-1 after:w-[10%] after:md:w-[5%] mb-8 uppercase"
+          class="text-xl md:text-2xl text-black font-semibold relative after:border-b-4 after:border-b-secondary after:absolute after:left-0 after:-bottom-1 after:w-8 mb-8 uppercase"
         >
           Location
         </h3>
