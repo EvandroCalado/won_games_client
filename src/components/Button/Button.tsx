@@ -14,7 +14,7 @@ const button = tv({
   variants: {
     variant: {
       primary:
-        'bg-gradient-to-b from-red to-primary p-2 text-white duration-150 hover:bg-gradient-to-b hover:from-red/95 hover:to-primary/95 active:bg-gradient-to-b active:from-red/80 active:to-primary/80 ',
+        'bg-gradient-to-b from-red to-primary p-2 text-white duration-150 hover:brightness-110 active:bg-gradient-to-b active:from-red/80 active:to-primary/80 ',
       ghost: 'p-2 duration-150 text-primary hover:bg-lightBg active:bg-white',
     },
     size: {
