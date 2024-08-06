@@ -4,7 +4,7 @@ import { GameInfo, GameInfoProps } from '.';
 import { mock } from './mock';
 
 export default {
-  title: 'Components/GameInfo',
+  title: 'Game/GameInfo',
   component: GameInfo,
   args: mock,
 } as Meta;
