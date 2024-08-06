@@ -17,4 +17,5 @@ export * from './Radio';
 export * from './Ribbon';
 export * from './Showcase';
 export * from './Slider';
+export * from './TextContent';
 export * from './TextField';

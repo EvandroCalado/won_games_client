@@ -6,6 +6,64 @@ body {
   @apply bg-mainBg;
 }
 
+/* text content */
+.text-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply my-1 border-l-4 border-l-secondary pl-2 text-white md:text-black;
+  }
+
+  h1 {
+    @apply text-3xl font-medium;
+  }
+
+  h2 {
+    @apply text-2xl font-medium;
+  }
+
+  h3 {
+    @apply text-xl font-medium;
+  }
+
+  h4 {
+    @apply text-lg font-medium;
+  }
+
+  h5 {
+    @apply font-medium;
+  }
+
+  h6 {
+    @apply text-sm font-medium;
+  }
+
+  p {
+    @apply mb-2;
+  }
+
+  a {
+    @apply text-primary duration-150 hover:brightness-75;
+  }
+
+  img,
+  video {
+    @apply mb-2 max-w-[min(700px,100%)];
+  }
+
+  ul,
+  ol {
+    @apply px-2 py-1;
+  }
+
+  hr {
+    @apply my-4;
+  }
+}
+
 /* banner slider */
 .banner-slider .slick-dots {
   list-style: none;
