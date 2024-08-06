@@ -35,7 +35,7 @@ exports[`Highlight should render a snapshot 1`] = `
         Heading 2
       </h6>
       <a
-        class="flex items-center justify-center gap-2 rounded w-max focus:ring-2 focus:ring-primary outline-none bg-gradient-to-b from-red to-primary p-2 text-white duration-150 hover:bg-gradient-to-b hover:from-red/95 hover:to-primary/95 active:bg-gradient-to-b active:from-red/80 active:to-primary/80 text-sm h-10 px-8 [&>svg]:w-5 [&>svg]:h-5 mt-6"
+        class="flex items-center justify-center gap-2 rounded w-max focus:ring-2 focus:ring-primary outline-none bg-gradient-to-b from-red to-primary p-2 text-white duration-150 hover:brightness-110 active:bg-gradient-to-b active:from-red/80 active:to-primary/80 text-sm h-10 px-8 [&>svg]:w-5 [&>svg]:h-5 mt-6"
         href="/games/defy-death"
       >
         Buy now

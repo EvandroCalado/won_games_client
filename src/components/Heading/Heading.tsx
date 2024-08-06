@@ -28,10 +28,10 @@ const heading = tv({
       true: 'pl-2 border-l-4 border-l-secondary',
     },
     lineBottomPrimary: {
-      true: 'relative after:border-b-4 after:border-b-primary after:absolute after:left-0 after:-bottom-1 after:w-[10%] after:md:w-[5%]',
+      true: 'relative after:border-b-4 after:border-b-primary after:absolute after:left-0 after:-bottom-1 after:w-8',
     },
     lineBottomSecondary: {
-      true: 'relative after:border-b-4 after:border-b-secondary after:absolute after:left-0 after:-bottom-1 after:w-[10%] after:md:w-[5%]',
+      true: 'relative after:border-b-4 after:border-b-secondary after:absolute after:left-0 after:-bottom-1 after:w-8',
     },
   },
 
