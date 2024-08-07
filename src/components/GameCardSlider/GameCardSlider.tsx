@@ -1,23 +1,26 @@
 'use client';
 
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
 import { FC } from 'react';
 import { GameCard, GameCardProps } from '../GameCard/GameCard';
 import { Slider, SliderSettings } from '../Slider';
 
-type SlickButtonFixProps = {
+type SlickArrowsFixProps = {
   children: React.ReactNode;
-  currentSlide?: number;
-  slideCount?: number;
+  currentSlide?: string;
+  slideCount?: string;
 };
 
-const SlickButtonFix: FC<SlickButtonFixProps> = ({
+const SlickArrowsFix: FC<SlickArrowsFixProps> = ({
   children,
   currentSlide,
   slideCount,
   ...props
-}) => <span {...props}>{children}</span>;
+}) => (
+  <span className={`${currentSlide} ${slideCount}`} {...props}>
+    {children}
+  </span>
+);
 
 export type GameCardSliderProps = {
   items: GameCardProps[];
@@ -33,22 +36,22 @@ export const GameCardSlider: FC<GameCardSliderProps> = ({
     infinite: false,
     lazyLoad: 'ondemand',
     nextArrow: (
-      <SlickButtonFix>
+      <SlickArrowsFix>
         <IconChevronRight
           aria-label="next games"
           size={32}
           color="currentColor"
         />
-      </SlickButtonFix>
+      </SlickArrowsFix>
     ),
     prevArrow: (
-      <SlickButtonFix>
+      <SlickArrowsFix>
         <IconChevronLeft
           aria-label="prev games"
           size={32}
           color="currentColor"
         />
-      </SlickButtonFix>
+      </SlickArrowsFix>
     ),
     responsive: [
       {
@@ -83,9 +86,7 @@ export const GameCardSlider: FC<GameCardSliderProps> = ({
   };
 
   return (
-    <section
-      className={`game-card-slider text-${color} my-10 -ml-3 -mr-4 md:-ml-2 md:-mr-4 2xl:-mx-[6px]`}
-    >
+    <section className={`game-card-slider text-${color} -mx-4 my-10`}>
       <Slider settings={settings}>
         {items.map((item, index) => (
           <GameCard key={item.title + index} {...item} />
