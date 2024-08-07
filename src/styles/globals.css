@@ -128,17 +128,12 @@ body {
 .game-card-slider .slick-track,
 .game-card-slider .slick-list {
   display: flex;
-  gap: 8px;
+  gap: 16px;
 }
 
 .game-card-slider .slick-slide > div {
-  /* margin: 0 8px; */
   flex: 1 0 auto;
   height: 100%;
-}
-
-.game-card-slider .slick-list {
-  margin: 0 !important;
 }
 
 .game-card-slider .slick-prev,
@@ -164,16 +159,6 @@ body {
 .game-card-slider .slick-prev.slick-disabled,
 .game-card-slider .slick-next.slick-disabled {
   visibility: hidden;
-}
-
-@media (max-width: 768px) {
-  .game-card-slider .slick-slide > div {
-    margin: 0 4px;
-  }
-
-  .game-card-slider .slick-list {
-    margin: 0 4px;
-  }
 }
 
 body .slick-prev::before,
