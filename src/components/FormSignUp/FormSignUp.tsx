@@ -29,7 +29,7 @@ export const FormSignUp = () => {
           name="confirmPassword"
           type="password"
           placeholder="Confirm password"
-          icon={<IconMail />}
+          icon={<IconLock />}
         />
 
         <div className="pt-4">
