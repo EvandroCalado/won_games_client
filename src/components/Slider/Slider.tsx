@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, ReactNode } from 'react';
+import { forwardRef, ForwardRefRenderFunction, ReactNode } from 'react';
 import SlickSlider, { Settings } from 'react-slick';
 
 export type SliderSettings = Settings;
@@ -10,6 +10,15 @@ export type SliderProps = {
   settings: SliderSettings;
 };
 
-export const Slider: FC<SliderProps> = ({ children, settings }) => {
-  return <SlickSlider {...settings}>{children}</SlickSlider>;
+const SliderComponent: ForwardRefRenderFunction<SlickSlider, SliderProps> = (
+  { children, settings },
+  ref,
+) => {
+  return (
+    <SlickSlider ref={ref} {...settings}>
+      {children}
+    </SlickSlider>
+  );
 };
+
+export const Slider = forwardRef(SliderComponent);
