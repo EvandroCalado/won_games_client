@@ -6,6 +6,7 @@ export * from './Container';
 export * from './Footer';
 export * from './FormSignIn';
 export * from './FormSignUp';
+export * from './Gallery';
 export * from './GameCard';
 export * from './GameCardSlider';
 export * from './GameInfo';
