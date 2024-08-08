@@ -65,7 +65,7 @@ export const Menu: FC<MenuProps> = ({ username }) => {
   } = menu({ isOpen });
 
   return (
-    <header className="relative mx-auto flex max-w-7xl items-center justify-between gap-8 px-4 py-14 transition-all">
+    <header className="relative mx-auto flex w-full max-w-7xl items-center justify-between gap-8 px-4 py-14 transition-all">
       {/* menu mobile */}
       <IconMenu3
         className="cursor-pointer text-white md:hidden"

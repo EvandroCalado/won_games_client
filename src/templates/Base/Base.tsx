@@ -9,7 +9,7 @@ export const Base: FC<BaseProps> = ({ children }) => {
   return (
     <>
       <Menu />
-      {children}
+      <div className="flex-1">{children}</div>
       <Footer />
     </>
   );
