@@ -14,7 +14,7 @@ body {
   h4,
   h5,
   h6 {
-    @apply my-1 border-l-4 border-l-secondary pl-2 text-white md:text-black;
+    @apply my-4 border-l-4 border-l-secondary pl-2 text-white md:text-black;
   }
 
   h1 {
@@ -51,7 +51,7 @@ body {
 
   img,
   video {
-    @apply mb-2 max-w-[min(700px,100%)];
+    @apply mx-auto mb-2 max-w-[min(700px,100%)];
   }
 
   ul,
@@ -61,6 +61,10 @@ body {
 
   hr {
     @apply my-4;
+  }
+
+  .description__copyrights {
+    @apply mt-4 text-xs font-light text-gray;
   }
 }
 
