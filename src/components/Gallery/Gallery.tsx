@@ -116,7 +116,7 @@ export const Gallery: FC<GalleryProps> = ({ items }) => {
             priority
             sizes="(124px, 68px)"
             role="button"
-            className="h-44 w-96 cursor-pointer object-cover duration-150 hover:brightness-125"
+            className="h-44 w-96 cursor-pointer snap-x object-cover duration-150 hover:brightness-125"
             onClick={() => {
               slider.current?.slickGoTo(index, true);
               setIsOpen(true);
