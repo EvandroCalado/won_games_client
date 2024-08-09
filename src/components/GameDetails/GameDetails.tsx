@@ -3,19 +3,21 @@ import { FC } from 'react';
 import { Heading } from '../Heading';
 
 type Platform = 'windows' | 'linux' | 'mac';
-type rating = 'BR0' | 'BR10' | 'BR12' | 'BR14' | 'BR16' | 'BR18';
+type Rating = 'BR0' | 'BR10' | 'BR12' | 'BR14' | 'BR16' | 'BR18';
 
 export type GameDetailsProps = {
   developer: string;
+  publisher: string;
   platforms: Platform[];
   releaseDate: string;
-  rating: rating;
+  rating: Rating;
   genres: string[];
 };
 
 export const GameDetails: FC<GameDetailsProps> = ({
   developer,
   platforms,
+  publisher,
   releaseDate,
   rating,
   genres,
@@ -28,7 +30,7 @@ export const GameDetails: FC<GameDetailsProps> = ({
 
   return (
     <div className="my-2">
-      <Heading lineLeft color="white" className="max-md:hidden">
+      <Heading lineLeft color="white" className="mb-8 max-md:hidden">
         Game Details
       </Heading>
 
@@ -71,7 +73,7 @@ export const GameDetails: FC<GameDetailsProps> = ({
         {/* block publisher */}
         <div>
           <h3 className="text-sm font-light">Publisher</h3>
-          <p className="font-bold">2k</p>
+          <p className="font-bold">{publisher}</p>
         </div>
         {/* block rating */}
         <div>

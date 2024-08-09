@@ -4,6 +4,7 @@ import { GameDetails, GameDetailsProps } from '.';
 const props: GameDetailsProps = {
   developer: 'Rockstar Games',
   platforms: ['windows', 'mac', 'linux'],
+  publisher: '2k Games',
   releaseDate: '2024-11-21T18:30:00',
   rating: 'BR0',
   genres: ['Action', 'Adventure', 'Rpg'],
@@ -39,6 +40,11 @@ describe('GameDetails', () => {
     expect(screen.getByRole('img', { name: /windows/i })).toBeInTheDocument();
     expect(screen.getByRole('img', { name: /linux/i })).toBeInTheDocument();
     expect(screen.getByRole('img', { name: /mac/i })).toBeInTheDocument();
+  });
+  it('should render the publisher ', () => {
+    render(<GameDetails {...props} />);
+
+    expect(screen.getByText(/2k games/i)).toBeInTheDocument();
   });
 
   it('should render the formated date', () => {
