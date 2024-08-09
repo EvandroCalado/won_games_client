@@ -45,7 +45,7 @@ export const Game: FC<GameProps> = ({
         className="absolute top-0 z-[-1] h-96 w-full bg-cover bg-top bg-no-repeat opacity-[0.4] [clip-path:_polygon(0_0,100%_0,100%_100%,0_85%)] md:h-[700px]"
       />
       {/* game info  */}
-      <Container className="mt-80">
+      <Container className="mt-20 md:mt-80">
         <GameInfo {...gameInfo} />
       </Container>
       {/* gallery */}
