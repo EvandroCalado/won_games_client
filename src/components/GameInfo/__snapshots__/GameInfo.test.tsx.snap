@@ -6,10 +6,10 @@ exports[`GameInfo should render a snapshot 1`] = `
     class="relative space-y-4 bg-white p-4"
   >
     <div
-      class="flex items-center font-bold text-white bg-secondary h-9 text-sm py-2 px-4 absolute -right-4 top-2 z-10 max-md:right-4 max-md:top-8"
+      class="flex items-center font-bold text-white bg-secondary h-9 text-sm py-2 px-4 absolute -right-4 top-2 z-10 md:right-4 md:top-4 [&>span]:md:hidden"
     >
       <span
-        class="max-md:hidden absolute right-0 border-solid border-t-[#2E8379] border-r-transparent border-r-[16px] border-t-[6px] -bottom-[6px]"
+        class="absolute right-0 border-solid border-t-[#2E8379] border-r-transparent border-r-[16px] border-t-[6px] -bottom-[6px]"
       />
       $210.00
     </div>

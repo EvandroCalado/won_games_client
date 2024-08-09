@@ -14,7 +14,10 @@ export type GameInfoProps = {
 export const GameInfo: FC<GameInfoProps> = ({ title, description, price }) => {
   return (
     <div className="relative space-y-4 bg-white p-4">
-      <Ribbon color="secondary" className="max-md:right-4 max-md:top-8">
+      <Ribbon
+        color="secondary"
+        className="md:right-4 md:top-4 [&>span]:md:hidden"
+      >
         {formatPrice(price)}
       </Ribbon>
 
