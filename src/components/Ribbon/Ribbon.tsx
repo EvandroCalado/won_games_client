@@ -5,7 +5,7 @@ import { tv, VariantProps } from 'tailwind-variants';
 const ribbon = tv({
   slots: {
     container: 'flex items-center font-bold text-white',
-    tail: 'max-md:hidden absolute right-0 border-solid',
+    tail: 'absolute right-0 border-solid',
   },
 
   variants: {
