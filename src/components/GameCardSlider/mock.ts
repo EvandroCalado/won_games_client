@@ -7,6 +7,7 @@ export const mock: GameCardProps[] = [
     img: '/img/card-image.png',
     price: 235,
     promotionalPrice: 215,
+    ribbon: 'Best Seller',
   },
   {
     title: 'Population Zero',
@@ -14,6 +15,7 @@ export const mock: GameCardProps[] = [
     img: '/img/card-image.png',
     price: 235,
     promotionalPrice: 215,
+    ribbon: 'Best Seller',
   },
   {
     title: 'Population Zero',
