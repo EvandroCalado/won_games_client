@@ -73,10 +73,12 @@ export const Menu: FC<MenuProps> = ({ username }) => {
         onClick={() => setIsOpen(true)}
       />
       {/* logo */}
-      <Logo
-        hideOnMobile
+      <Link
+        href="/"
         className="max-md:absolute max-md:left-1/2 max-md:-translate-x-1/2"
-      />
+      >
+        <Logo hideOnMobile />
+      </Link>
       {/* nav links desktop */}
       <div className={menuAnimaionDesktopStyles()}>
         <Link href="/" className={linkStyles()}>
@@ -111,7 +113,7 @@ export const Menu: FC<MenuProps> = ({ username }) => {
           <Link href="/" className={linkStyles()}>
             Home
           </Link>
-          <Link href="/" className={linkStyles()}>
+          <Link href="/store" className={linkStyles()}>
             Store
           </Link>
 
@@ -121,7 +123,7 @@ export const Menu: FC<MenuProps> = ({ username }) => {
                 My account
               </Link>
 
-              <Link href="/" className={linkStyles()}>
+              <Link href="/wishlist" className={linkStyles()}>
                 Wishlist
               </Link>
             </>
