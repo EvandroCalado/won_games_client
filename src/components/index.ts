@@ -9,6 +9,7 @@ export * from './FormSignUp';
 export * from './Gallery';
 export * from './GameCard';
 export * from './GameCardSlider';
+export * from './GameDetails';
 export * from './GameInfo';
 export * from './Heading';
 export * from './Highlight';
