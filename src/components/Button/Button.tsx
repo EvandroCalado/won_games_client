@@ -9,7 +9,7 @@ import {
 import { tv, VariantProps } from 'tailwind-variants';
 
 const button = tv({
-  base: 'flex items-center justify-center gap-2 rounded w-max focus:ring-2 focus:ring-primary outline-none',
+  base: 'flex items-center justify-center gap-2 rounded w-max focus:ring-2 focus:ring-primary outline-none font-semibold',
 
   variants: {
     variant: {
