@@ -5,7 +5,7 @@ import { Wishlist } from '@/templates';
 const WishlistPage = () => {
   return (
     <Wishlist
-      // games={recommendedMock}s
+      games={recommendedMock}
       recommendedGames={recommendedMock}
       recommendedHighlight={highlightMock}
     />
