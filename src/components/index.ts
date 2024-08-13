@@ -12,6 +12,7 @@ export * from './GameCard';
 export * from './GameCardSlider';
 export * from './GameDetails';
 export * from './GameInfo';
+export * from './GameItem';
 export * from './Heading';
 export * from './Highlight';
 export * from './Logo';
