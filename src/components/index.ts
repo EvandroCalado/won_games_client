@@ -1,6 +1,7 @@
 export * from './Banner';
 export * from './BannerSlider';
 export * from './Button';
+export * from './CartList';
 export * from './Checkbox';
 export * from './Container';
 export * from './Empty';
