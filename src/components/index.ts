@@ -18,6 +18,7 @@ export * from './Heading';
 export * from './Highlight';
 export * from './Logo';
 export * from './Menu';
+export * from './PaymentOptions';
 export * from './Radio';
 export * from './Ribbon';
 export * from './Separator';
