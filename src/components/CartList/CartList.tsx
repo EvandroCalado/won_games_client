@@ -9,13 +9,15 @@ export type CartListProps = {
 
 export const CartList: FC<CartListProps> = ({ items, total }) => {
   return (
-    <div className="flex h-full flex-col justify-between self-start bg-white">
-      {items.map((item, index) => (
-        <GameItem key={item.title + index} {...item} />
-      ))}
+    <div className="flex h-full flex-col justify-between bg-white">
+      <div>
+        {items.map((item, index) => (
+          <GameItem key={item.title + index} {...item} />
+        ))}
+      </div>
 
       <div className="flex justify-between bg-lightGray p-5 text-sm text-black md:p-2 md:text-base">
-        Total:{' '}
+        Total:
         <span className="font-semibold text-primary">{formatPrice(total)}</span>
       </div>
     </div>
