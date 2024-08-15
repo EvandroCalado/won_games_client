@@ -37,6 +37,13 @@ jest.mock('@/components/PaymentOptions', () => ({
   },
 }));
 
+jest.mock('@/components/PurchaseInfo', () => ({
+  __esModule: true,
+  PurchaseInfo: function Mock() {
+    return <div data-testid="Mock PurchaseInfo"></div>;
+  },
+}));
+
 jest.mock('@/components/Empty', () => ({
   __esModule: true,
   Empty: function Mock() {
@@ -55,6 +62,7 @@ describe('Cart', () => {
     expect(screen.getByTestId('Mock Showcase')).toBeInTheDocument();
     expect(screen.getByTestId('Mock CartList')).toBeInTheDocument();
     expect(screen.getByTestId('Mock PaymentOptions')).toBeInTheDocument();
+    expect(screen.queryByTestId('Mock PurchaseInfo')).toBeInTheDocument();
     expect(screen.queryByTestId('Mock Empty')).not.toBeInTheDocument();
   });
 
