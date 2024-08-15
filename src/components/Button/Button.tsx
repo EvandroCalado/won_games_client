@@ -9,12 +9,12 @@ import {
 import { tv, VariantProps } from 'tailwind-variants';
 
 const button = tv({
-  base: 'flex items-center justify-center gap-2 rounded w-max focus:ring-2 focus:ring-primary outline-none font-semibold',
+  base: 'flex items-center justify-center gap-2 rounded w-max focus:ring-2 focus:ring-primary outline-none font-semibold cursor-pointer disabled:opacity-30 disabled:pointer-events-none',
 
   variants: {
     variant: {
       primary:
-        'bg-gradient-to-b from-red to-primary p-2 text-white duration-150 hover:brightness-110 active:bg-gradient-to-b active:from-red/80 active:to-primary/80 ',
+        'bg-gradient-to-b from-red to-primary p-2 text-white duration-150 hover:brightness-110 active:bg-gradient-to-b active:from-red/80 active:to-primary/80',
       ghost: 'p-2 duration-150 text-primary hover:bg-lightBg active:bg-white',
     },
     size: {
@@ -27,6 +27,7 @@ const button = tv({
   defaultVariants: {
     size: 'md',
     variant: 'primary',
+    disabled: false,
   },
 });
 
@@ -42,8 +43,8 @@ export type ButtonProps = {
 
 export const Button: FC<ButtonProps> = ({
   children,
-  variant,
   size,
+  variant,
   icon,
   as = 'button',
   className,

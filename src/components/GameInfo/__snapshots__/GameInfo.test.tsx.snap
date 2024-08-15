@@ -27,7 +27,7 @@ exports[`GameInfo should render a snapshot 1`] = `
       class="flex flex-col gap-2 md:flex-row-reverse"
     >
       <button
-        class="flex items-center justify-center gap-2 rounded w-max focus:ring-2 focus:ring-primary outline-none font-semibold bg-gradient-to-b from-red to-primary p-2 text-white duration-150 hover:brightness-110 active:bg-gradient-to-b active:from-red/80 active:to-primary/80 text-sm h-10 px-8 [&>svg]:w-5 [&>svg]:h-5 max-md:w-full"
+        class="flex items-center justify-center gap-2 rounded w-max focus:ring-2 focus:ring-primary outline-none font-semibold cursor-pointer disabled:opacity-30 disabled:pointer-events-none bg-gradient-to-b from-red to-primary p-2 text-white duration-150 hover:brightness-110 active:bg-gradient-to-b active:from-red/80 active:to-primary/80 text-sm h-10 px-8 [&>svg]:w-5 [&>svg]:h-5 max-md:w-full"
       >
         <svg
           class="tabler-icon tabler-icon-shopping-cart-plus "
@@ -60,7 +60,7 @@ exports[`GameInfo should render a snapshot 1`] = `
         Add to cart
       </button>
       <button
-        class="flex items-center justify-center gap-2 rounded w-max focus:ring-2 focus:ring-primary outline-none font-semibold p-2 duration-150 text-primary hover:bg-lightBg active:bg-white text-sm h-10 px-8 [&>svg]:w-5 [&>svg]:h-5 max-md:w-full"
+        class="flex items-center justify-center gap-2 rounded w-max focus:ring-2 focus:ring-primary outline-none font-semibold cursor-pointer disabled:opacity-30 disabled:pointer-events-none p-2 duration-150 text-primary hover:bg-lightBg active:bg-white text-sm h-10 px-8 [&>svg]:w-5 [&>svg]:h-5 max-md:w-full"
       >
         <svg
           class="tabler-icon tabler-icon-heart "

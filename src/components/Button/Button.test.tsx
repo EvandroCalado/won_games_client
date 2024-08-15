@@ -58,6 +58,15 @@ describe('Button', () => {
     expect(screen.getByRole('button')).toHaveClass('text-primary');
   });
 
+  it('should render disabled', () => {
+    render(
+      <Button variant="ghost" disabled>
+        test
+      </Button>,
+    );
+    expect(screen.getByRole('button')).toBeDisabled();
+  });
+
   it('should render a button snapshot', () => {
     const { container } = render(<Button>test</Button>);
     expect(container.firstChild).toMatchSnapshot();
