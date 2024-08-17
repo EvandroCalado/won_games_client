@@ -2,7 +2,7 @@ import { Meta } from '@storybook/react';
 import { FormProfile } from '.';
 
 export default {
-  title: 'Components/FormProfile',
+  title: 'Profile/FormProfile',
   component: FormProfile,
 } as Meta;
 
