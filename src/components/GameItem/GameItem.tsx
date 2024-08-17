@@ -28,7 +28,7 @@ export const GameItem: FC<GameItemProps> = ({
   paymentInfo,
 }) => {
   return (
-    <div className="space-y-4 border-b border-lightGray p-4 md:flex md:justify-between">
+    <div className="space-y-4 border-b border-lightGray py-4 md:flex md:justify-between">
       {/* content */}
       <div className="flex gap-4">
         <Image
@@ -50,7 +50,7 @@ export const GameItem: FC<GameItemProps> = ({
                 href={downloadLink}
                 target="_blank"
                 aria-label={`Get ${title} here`}
-                className="text-primary"
+                className="text-primary duration-150 hover:text-primary/70"
               >
                 <IconDeviceDesktopDown />
               </Link>
