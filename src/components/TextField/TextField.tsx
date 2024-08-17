@@ -25,7 +25,7 @@ const textField = tv({
         labelStyles: 'text-gray/20',
         inputWapperStyles:
           'pointer-events-none border-lightGray/80 bg-lightGray/80 [&>svg]:text-gray/20',
-        inputStyles: 'placeholder:text-gray/20',
+        inputStyles: 'placeholder:text-gray/20 text-gray/20',
       },
     },
     iconPosition: {
