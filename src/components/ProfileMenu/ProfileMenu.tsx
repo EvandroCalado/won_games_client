@@ -6,8 +6,13 @@ import {
 } from '@tabler/icons-react';
 import Link from 'next/link';
 
+export type ActiveLinkProps =
+  | '/profile/me'
+  | '/profile/cards'
+  | '/profile/orders';
+
 export type ProfileMenuProps = {
-  activeLink?: '/profile/me' | '/profile/cards' | '/profile/orders';
+  activeLink?: ActiveLinkProps;
 };
 
 export const ProfileMenu = ({
