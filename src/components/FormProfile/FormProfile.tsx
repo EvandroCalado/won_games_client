@@ -6,7 +6,7 @@ export const FormProfile = () => {
   return (
     <div>
       <Heading lineBottomPrimary color="black" className="mb-8">
-        My profile
+        My account
       </Heading>
 
       <form className="grid grid-cols-1 gap-4 md:grid-cols-2">
