@@ -6,7 +6,7 @@ describe('FormProfile', () => {
     render(<FormProfile />);
 
     expect(
-      screen.getByRole('heading', { name: /my profile/i }),
+      screen.getByRole('heading', { name: /my account/i }),
     ).toBeInTheDocument();
     expect(screen.getByRole('textbox', { name: /name/i })).toBeInTheDocument();
     expect(screen.getByRole('textbox', { name: /email/i })).toBeInTheDocument();
