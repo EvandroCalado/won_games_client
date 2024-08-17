@@ -19,6 +19,7 @@ export * from './Highlight';
 export * from './Logo';
 export * from './Menu';
 export * from './PaymentOptions';
+export * from './ProfileMenu';
 export * from './PurchaseInfo';
 export * from './Radio';
 export * from './Ribbon';
