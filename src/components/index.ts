@@ -20,6 +20,7 @@ export * from './Heading';
 export * from './Highlight';
 export * from './Logo';
 export * from './Menu';
+export * from './OrdersList';
 export * from './PaymentOptions';
 export * from './ProfileMenu';
 export * from './PurchaseInfo';
