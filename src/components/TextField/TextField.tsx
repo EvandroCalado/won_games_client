@@ -22,7 +22,7 @@ const textField = tv({
     },
     disabled: {
       true: {
-        labelStyles: 'text-gray/20',
+        labelStyles: 'text-gray/20 pointer-events-none',
         inputWapperStyles:
           'pointer-events-none border-lightGray/80 bg-lightGray/80 [&>svg]:text-gray/20',
         inputStyles: 'placeholder:text-gray/20 text-gray/20',
