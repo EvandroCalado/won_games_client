@@ -6,6 +6,7 @@ export * from './CartList';
 export * from './Checkbox';
 export * from './Container';
 export * from './Empty';
+export * from './ExploreSidebar';
 export * from './Footer';
 export * from './FormProfile';
 export * from './FormSignIn';
