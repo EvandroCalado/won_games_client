@@ -51,32 +51,32 @@ export const ExploreSidebar: FC<ExploreSidebarProps> = ({
 
   return (
     <div
-      className={`${isOpen ? 'p-4 transition-[background] duration-300 max-md:bg-white' : 'duration-300'} md:block`}
+      className={`${isOpen ? '' : 'max-md:h-6 max-md:w-6'} transition-[background] duration-300 md:block`}
     >
-      {/* open/close icons */}
-      <div>
-        <IconFilter
-          aria-label="open filters"
-          onClick={() => setIsOpen(true)}
-          className={`${isOpen ? 'hidden' : 'max-md:block'} cursor-pointer text-white md:hidden`}
-        />
-        <IconX
-          aria-label="close filters"
-          onClick={() => setIsOpen(false)}
-          className={`${isOpen ? 'max-md:block' : ''} ml-auto hidden cursor-pointer text-black`}
-        />
-      </div>
+      {/* open icon */}
+      <IconFilter
+        aria-label="open filters"
+        onClick={() => setIsOpen(true)}
+        className={`${isOpen ? 'hidden' : 'max-md:block'} cursor-pointer text-white md:hidden`}
+      />
 
       {/* filter and button */}
       <div
         data-testid="explore-sidebar"
         aria-hidden={isOpen}
-        className={`${isOpen ? 'max-md:visible max-md:opacity-100' : 'max-md:invisible max-md:opacity-0'} relative flex flex-col justify-between transition-opacity duration-300 max-md:pb-8`}
+        className={`${isOpen ? 'max-md:visible max-md:fixed max-md:inset-0 max-md:z-50 max-md:bg-white max-md:p-4 max-md:opacity-100' : 'max-md:invisible max-md:opacity-0'} transition-opacity duration-300`}
       >
+        {/* close icon */}
+        <IconX
+          aria-label="close filters"
+          onClick={() => setIsOpen(false)}
+          className={`${isOpen ? 'max-md:block' : ''} ml-auto hidden cursor-pointer text-black`}
+        />
+
         {items.map((item) => (
           <div
             key={item.title}
-            className={`${isOpen ? 'max-md:relative max-md:top-0 max-md:[&>div>label]:text-black' : 'max-md:top-8'} mb-6 border-b-[1px] border-gray/40 pb-6 transition-[top] duration-300 [&>div>input]:mb-2`}
+            className={`${isOpen ? 'max-md:relative max-md:top-0 max-md:[&>div>label]:text-black' : 'max-md:top-8'} mb-5 border-b-[1px] border-gray/40 pb-5 transition-[top] duration-300 [&>div>input]:mb-2`}
           >
             <Heading
               as="h3"
@@ -116,13 +116,10 @@ export const ExploreSidebar: FC<ExploreSidebarProps> = ({
               ))}
           </div>
         ))}
-
         {/* button */}
-        <div className="bottom-0 left-0 right-0 border-t-[1px] p-4 max-md:fixed max-md:border-gray/40 max-md:bg-white">
-          <Button onClick={handleFilter} className="mt-2 w-full">
-            Filter
-          </Button>
-        </div>
+        <Button onClick={handleFilter} className="mt-2 w-full">
+          Filter
+        </Button>
       </div>
     </div>
   );
