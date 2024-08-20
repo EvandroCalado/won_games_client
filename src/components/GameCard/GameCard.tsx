@@ -42,7 +42,14 @@ export const GameCard: FC<GameCardProps> = ({
       )}
       {/* image box */}
       <Link href={''} className="relative min-h-36 w-full bg-lightGray">
-        <Image src={img} alt={title} fill className="object-cover" />
+        <Image
+          src={img}
+          alt={title}
+          fill
+          className="object-cover"
+          priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
       </Link>
       {/* content */}
       <div className="relative m-2 flex h-full flex-col justify-between">
