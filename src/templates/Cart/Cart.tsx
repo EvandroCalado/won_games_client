@@ -38,7 +38,7 @@ export const Cart: FC<CartProps> = ({
         <Heading lineLeft>My cart</Heading>
 
         {/* cart items and payment or empty */}
-        {items.length ? (
+        {items?.length ? (
           <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:[&>:first-child]:col-span-2">
             <CartList items={items} total={total} />
             <PaymentOptions cards={cards} handlePayment={handlePayment} />
