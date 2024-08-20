@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { FC } from 'react';
+import { twMerge } from 'tailwind-merge';
 import { Button } from '../Button';
 import { Heading } from '../Heading';
 
@@ -7,11 +8,22 @@ export type EmptyProps = {
   title: string;
   description: string;
   hasLink?: boolean;
+  className?: string;
 };
 
-export const Empty: FC<EmptyProps> = ({ title, description, hasLink }) => {
+export const Empty: FC<EmptyProps> = ({
+  title,
+  description,
+  hasLink,
+  className,
+}) => {
   return (
-    <div className="flex flex-col items-center justify-center gap-4">
+    <div
+      className={twMerge(
+        'flex flex-col items-center justify-center gap-4',
+        className,
+      )}
+    >
       <Image
         src="/img/empty.svg"
         alt="A gamer in a couch playng videogame"
