@@ -6,6 +6,7 @@ export * from './CartIcon';
 export * from './CartList';
 export * from './Checkbox';
 export * from './Container';
+export * from './Dropdown';
 export * from './Empty';
 export * from './ExploreSidebar';
 export * from './Footer';
