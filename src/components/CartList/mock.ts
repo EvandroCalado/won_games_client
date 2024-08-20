@@ -1,7 +1,7 @@
 export const mock = [
   {
     img: '/img/card-image.png',
-    title: 'Population Zero',
+    title: 'Borderlands 3',
     price: 235,
   },
   {

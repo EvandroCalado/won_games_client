@@ -26,3 +26,9 @@ export const WithButton: StoryFn<CartListProps> = (args) => (
     <CartList {...args} hasButton />
   </div>
 );
+
+export const Empty: StoryFn<CartListProps> = () => (
+  <div className="mx-auto max-w-7xl">
+    <CartList />
+  </div>
+);
