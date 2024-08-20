@@ -2,6 +2,7 @@ export * from './Banner';
 export * from './BannerSlider';
 export * from './Button';
 export * from './CardsList';
+export * from './CartDropdown';
 export * from './CartIcon';
 export * from './CartList';
 export * from './Checkbox';
