@@ -8,6 +8,7 @@ export default {
   args: {
     items: mock,
     total: 470,
+    hasButton: false,
   },
   parameters: {
     layout: 'fullscreen',
@@ -17,5 +18,11 @@ export default {
 export const Default: StoryFn<CartListProps> = (args) => (
   <div className="mx-auto max-w-7xl">
     <CartList {...args} />
+  </div>
+);
+
+export const WithButton: StoryFn<CartListProps> = (args) => (
+  <div className="mx-auto max-w-7xl">
+    <CartList {...args} hasButton />
   </div>
 );
