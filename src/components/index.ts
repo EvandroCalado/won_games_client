@@ -35,3 +35,4 @@ export * from './Showcase';
 export * from './Slider';
 export * from './TextContent';
 export * from './TextField';
+export * from './UserDropdown';
