@@ -7,11 +7,16 @@ import { GameItemProps } from '../GameItem';
 export type CartDropdownProps = {
   items?: GameItemProps[];
   total?: number;
+  className?: string;
 };
 
-export const CartDropdown: FC<CartDropdownProps> = ({ items, total }) => {
+export const CartDropdown: FC<CartDropdownProps> = ({
+  items,
+  total,
+  className,
+}) => {
   return (
-    <div>
+    <div className={className}>
       <Dropdown title={<CartIcon quantity={items?.length} />}>
         <CartList items={items} total={total} hasButton className="w-[560px]" />
       </Dropdown>

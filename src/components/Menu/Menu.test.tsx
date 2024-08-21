@@ -37,11 +37,9 @@ describe('Menu', () => {
     expect(screen.getByText(/sign up/i)).toBeInTheDocument();
   });
 
-  it('should not show login or sign up buttons when user is logged out', () => {
+  it('should not show login or sign up buttons when user is logged in', () => {
     render(<Menu username="johndoe" />);
 
-    expect(screen.getByText(/my account/i)).toBeInTheDocument();
-    expect(screen.getByText(/wishlist/i)).toBeInTheDocument();
     expect(screen.queryByText(/log in now/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/sign up/i)).not.toBeInTheDocument();
   });

@@ -10,3 +10,7 @@ export default {
 } as Meta;
 
 export const Default: StoryFn<MenuProps> = (args) => <Menu {...args} />;
+
+export const LoggedIn: StoryFn<MenuProps> = (args) => (
+  <Menu {...args} username="username" />
+);

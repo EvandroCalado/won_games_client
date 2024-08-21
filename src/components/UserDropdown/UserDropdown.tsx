@@ -32,7 +32,7 @@ export const UserDropdown: FC<UserDropdownProps> = ({ username }) => {
           <span>My profile</span>
         </Link>
         <Link
-          href="wishlist"
+          href="/wishlist"
           className="flex items-center gap-4 bg-white px-8 py-4 text-black transition-[background,color] duration-150 hover:bg-primary hover:text-white"
         >
           <IconHeart />

@@ -10,7 +10,9 @@ import Link from 'next/link';
 import { FC, useState } from 'react';
 import { tv } from 'tailwind-variants';
 import { Button } from '../Button';
+import { CartDropdown } from '../CartDropdown';
 import { Logo } from '../Logo';
+import { UserDropdown } from '../UserDropdown';
 
 const menu = tv({
   slots: {
@@ -66,12 +68,13 @@ export const Menu: FC<MenuProps> = ({ username }) => {
 
   return (
     <header className="relative mx-auto flex w-full max-w-7xl items-center justify-between gap-8 px-4 py-14 transition-all">
-      {/* menu mobile */}
+      {/* menu desktop */}
       <IconMenu3
         className="cursor-pointer text-white md:hidden"
         aria-label="open menu"
         onClick={() => setIsOpen(true)}
       />
+
       {/* logo */}
       <Link
         href="/"
@@ -79,28 +82,40 @@ export const Menu: FC<MenuProps> = ({ username }) => {
       >
         <Logo hideOnMobile />
       </Link>
+
       {/* nav links desktop */}
       <div className={menuAnimaionDesktopStyles()}>
         <Link href="/" className={linkStyles()}>
           Home
         </Link>
-        <Link href="/store" className={linkStyles()}>
-          Store
+        <Link href="/games" className={linkStyles()}>
+          Explore
         </Link>
       </div>
+
       {/* search, cart and sign in */}
       <div className="ml-auto flex items-center gap-4">
         <IconSearch className="cursor-pointer text-white" aria-label="search" />
-        <IconShoppingCart
-          className="cursor-pointer text-white"
-          aria-label="open shopping cart"
-        />
-        {!username && (
+
+        <CartDropdown className="max-md:hidden" />
+        <Link href="/cart" className="md:hidden">
+          <IconShoppingCart
+            className="text-white"
+            aria-label="open shopping cart"
+          />
+        </Link>
+
+        {!username ? (
           <Button className="max-md:hidden" as="a" href="/sign-in">
             Sign in
           </Button>
+        ) : (
+          <div className="max-md:hidden">
+            <UserDropdown username={username} />
+          </div>
         )}
       </div>
+
       {/* menu mobile */}
       <nav aria-hidden={!isOpen} className={menuStyles()}>
         <IconX
@@ -108,19 +123,20 @@ export const Menu: FC<MenuProps> = ({ username }) => {
           onClick={() => setIsOpen(false)}
           className="absolute right-0 top-0 m-4 cursor-pointer"
         />
+
         {/* nav links mobile */}
         <div className={menuAnimaionMobileStyles()}>
           <Link href="/" className={linkStyles()}>
             Home
           </Link>
-          <Link href="/store" className={linkStyles()}>
+          <Link href="/games" className={linkStyles()}>
             Store
           </Link>
 
           {!!username && (
             <>
-              <Link href="/" className={linkStyles()}>
-                My account
+              <Link href="/profile/me" className={linkStyles()}>
+                My profile
               </Link>
 
               <Link href="/wishlist" className={linkStyles()}>
@@ -129,6 +145,7 @@ export const Menu: FC<MenuProps> = ({ username }) => {
             </>
           )}
         </div>
+
         {/* login or sign up */}
         {!username && (
           <div className={menuAnimaionLoginStyles()}>
