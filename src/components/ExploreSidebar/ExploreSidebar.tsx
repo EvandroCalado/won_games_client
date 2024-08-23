@@ -76,7 +76,7 @@ export const ExploreSidebar: FC<ExploreSidebarProps> = ({
         {items.map((item) => (
           <div
             key={item.title}
-            className={`${isOpen ? 'max-md:relative max-md:top-0 max-md:[&>div>label]:text-black' : 'max-md:top-8'} mb-5 border-b-[1px] border-gray/40 pb-5 transition-[top] duration-300 [&>div>input]:mb-2`}
+            className={`${isOpen ? 'max-md:relative max-md:top-0 max-md:[&>div>label]:text-black' : 'max-md:top-8'} mb-5 border-b-[1px] border-gray/40 pb-5 transition-[top] duration-300 hover:ring-gray [&>div>input]:mb-2`}
           >
             <Heading
               as="h3"
