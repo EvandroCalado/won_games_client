@@ -8,11 +8,7 @@ const checkbox = tv({
     containerStyles: 'flex items-center gap-2',
     labelStyles: 'cursor-pointer leading-4',
     inputStyles: [
-      'cursor-pointer flex items-center justify-center appearance-none w-5 h-5 border-2 border-solid border-darkGray rounded transition-all duration-150 relative outline-none',
-      'before:content-[""] before:w-2 before:h-3 before:border-2 before:border-t-0 before:border-l-0 before:border-white before:rotate-45 before:absolute before:top-0 before:opacity-0 before:transition-all before:duration-150',
-      'checked:border-primary checked:bg-primary checked:before:opacity-100',
-      'focus:ring-2 focus:ring-primary',
-      'hover:ring-gray hover:ring-2 transition-all duration-150',
+      'cursor-pointer flex items-center justify-center appearance-none w-5 h-5 border-2 border-solid border-gray rounded transition-all duration-150 relative outline-none before:content-[""] before:w-2 before:h-3 before:border-2 before:border-t-0 before:border-l-0 before:border-white before:rotate-45 before:absolute before:top-0 before:opacity-0 before:transition-all before:duration-150 checked:border-primary checked:bg-primary checked:before:opacity-100 focus:border-2 focus:border-primary hover:border-gray hover:border-gray/50',
     ],
   },
 
