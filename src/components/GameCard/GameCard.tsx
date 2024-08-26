@@ -8,9 +8,11 @@ import { Heading } from '../Heading';
 import { Ribbon } from '../Ribbon';
 
 export type GameCardProps = {
+  id: string;
   title: string;
+  slug: string;
   developer: string;
-  img: string;
+  img: string | undefined;
   price: number;
   promotionalPrice?: number;
   favorite?: boolean;
@@ -22,6 +24,7 @@ export type GameCardProps = {
 
 export const GameCard: FC<GameCardProps> = ({
   title,
+  slug,
   developer,
   img,
   price,
@@ -41,9 +44,12 @@ export const GameCard: FC<GameCardProps> = ({
         </Ribbon>
       )}
       {/* image box */}
-      <Link href={''} className="relative min-h-36 w-full bg-lightGray">
+      <Link
+        href={`/game/${slug}`}
+        className="relative min-h-36 w-full bg-lightGray"
+      >
         <Image
-          src={img}
+          src={img || '/img/empty-card.png'}
           alt={title}
           fill
           className="object-cover"
@@ -54,8 +60,13 @@ export const GameCard: FC<GameCardProps> = ({
       {/* content */}
       <div className="relative m-2 flex h-full flex-col justify-between">
         {/* info */}
-        <Link href={''} className="max-w-[calc(100% - 250px)]">
-          <Heading as="h3" color="black" className="font-bold">
+        <Link href={`/game/${slug}`} className="max-w-[calc(100% - 250px)]">
+          <Heading
+            as="h3"
+            size="lg"
+            color="black"
+            className="max-w-[90%] font-bold"
+          >
             {title}
           </Heading>
           <Heading as="h5" size="sm" className="text-gray">

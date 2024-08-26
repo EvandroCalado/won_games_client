@@ -6,6 +6,7 @@ export default {
   component: GameCard,
   args: {
     title: 'Population Zero',
+    slug: 'population-zero',
     developer: 'Other Ocean',
     img: '/img/card-image.png',
     price: 235,

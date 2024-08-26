@@ -2,7 +2,9 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { GameCard } from '.';
 
 const props = {
+  id: '1',
   title: 'Population Zero',
+  slug: 'population-zero',
   developer: 'Other Ocean',
   img: '/img/card-image.png',
   price: 215,
@@ -17,12 +19,26 @@ describe('GameCard', () => {
     expect(
       screen.getByRole('heading', { level: 5, name: /other ocean/i }),
     ).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: props.title })).toHaveAttribute(
+      'href',
+      `/game/${props.slug}`,
+    );
     expect(
       screen.getByRole('img', { name: /population zero/i }),
     ).toBeInTheDocument();
     expect(
       screen.getByRole('button', { name: /add to wishlist/i }),
     ).toBeInTheDocument();
+  });
+
+  it('should render image empty placeholder', () => {
+    render(<GameCard {...props} img="" />);
+    expect(
+      screen.getByRole('img', { name: /population zero/i }),
+    ).toHaveAttribute(
+      'src',
+      '/_next/image?url=%2Fimg%2Fempty-card.png&w=3840&q=75',
+    );
   });
 
   it('should render price in label', () => {
