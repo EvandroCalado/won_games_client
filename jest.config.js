@@ -9,6 +9,8 @@ module.exports = {
     '!src/styles/**',
     '!src/types/**',
     '!src/utils/**',
+    '!src/lib/**',
+    '!src/graphql/**/*',
     '!src/**/*.stories.tsx',
     '!src/**/mock.ts',
   ],
