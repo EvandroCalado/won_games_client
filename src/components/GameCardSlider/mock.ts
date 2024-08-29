@@ -2,7 +2,9 @@ import { GameCardProps } from '../GameCard/GameCard';
 
 export const mock: GameCardProps[] = [
   {
+    id: '1',
     title: 'Population Zero',
+    slug: 'population-zero',
     developer: 'Rockstar Games',
     img: '/img/card-image.png',
     price: 235,
@@ -10,7 +12,9 @@ export const mock: GameCardProps[] = [
     ribbon: 'Best Seller',
   },
   {
+    id: '2',
     title: 'Population Zero',
+    slug: 'population-zero',
     developer: 'Rockstar Games',
     img: '/img/card-image.png',
     price: 235,
@@ -18,28 +22,36 @@ export const mock: GameCardProps[] = [
     ribbon: 'Best Seller',
   },
   {
+    id: '3',
     title: 'Population Zero',
+    slug: 'population-zero',
     developer: 'Rockstar Games',
     img: '/img/card-image.png',
     price: 235,
     promotionalPrice: 215,
   },
   {
+    id: '4',
     title: 'Population Zero',
+    slug: 'population-zero',
     developer: 'Rockstar Games',
     img: '/img/card-image.png',
     price: 235,
     promotionalPrice: 215,
   },
   {
+    id: '5',
     title: 'Population Zero',
+    slug: 'population-zero',
     developer: 'Rockstar Games',
     img: '/img/card-image.png',
     price: 235,
     promotionalPrice: 215,
   },
   {
+    id: '6',
     title: 'Population Zero',
+    slug: 'population-zero',
     developer: 'Rockstar Games',
     img: '/img/card-image.png',
     price: 235,
