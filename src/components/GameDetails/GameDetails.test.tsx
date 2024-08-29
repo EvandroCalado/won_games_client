@@ -3,7 +3,7 @@ import { GameDetails, GameDetailsProps } from '.';
 
 const props: GameDetailsProps = {
   developer: 'Rockstar Games',
-  platforms: ['windows', 'mac', 'linux'],
+  platforms: ['windows', 'osx', 'linux'],
   publisher: '2k Games',
   releaseDate: '2024-11-21T18:30:00',
   rating: 'BR0',
@@ -39,7 +39,7 @@ describe('GameDetails', () => {
 
     expect(screen.getByRole('img', { name: /windows/i })).toBeInTheDocument();
     expect(screen.getByRole('img', { name: /linux/i })).toBeInTheDocument();
-    expect(screen.getByRole('img', { name: /mac/i })).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: /osx/i })).toBeInTheDocument();
   });
   it('should render the publisher ', () => {
     render(<GameDetails {...props} />);

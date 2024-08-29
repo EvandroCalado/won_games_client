@@ -2,8 +2,8 @@ import Image from 'next/image';
 import { FC } from 'react';
 import { Heading } from '../Heading';
 
-type Platform = 'windows' | 'linux' | 'mac';
-type Rating = 'BR0' | 'BR10' | 'BR12' | 'BR14' | 'BR16' | 'BR18';
+export type Platform = 'windows' | 'linux' | 'osx';
+export type Rating = 'BR0' | 'BR10' | 'BR12' | 'BR14' | 'BR16' | 'BR18';
 
 export type GameDetailsProps = {
   developer: string;
@@ -25,7 +25,7 @@ export const GameDetails: FC<GameDetailsProps> = ({
   const platformIcons = {
     windows: '/img/windows.svg',
     linux: '/img/linux.svg',
-    mac: '/img/apple.svg',
+    osx: '/img/apple.svg',
   };
 
   return (
