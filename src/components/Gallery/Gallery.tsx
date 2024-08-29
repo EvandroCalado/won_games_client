@@ -79,7 +79,7 @@ const modalSettings: SliderSettings = {
 
 export type GalleryItemProps = {
   src: string;
-  alt: string;
+  alt: string | null;
 };
 
 export type GalleryProps = {
