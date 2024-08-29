@@ -58,7 +58,7 @@ export const Game: FC<GameProps> = ({
 
       {/* text content */}
       <Container>
-        <TextContent title="Cyberpunk 2077" content={description} />
+        <TextContent title={gameInfo.title} content={description} />
       </Container>
 
       {/* game details */}
