@@ -3,6 +3,9 @@ import { Button } from '../Button';
 import { Heading } from '../Heading';
 import { Ribbon } from '../Ribbon';
 
+export type RibbonSize = 'sm' | 'md';
+export type RibbonColor = 'primary' | 'secondary';
+
 export type BannerProps = {
   img: string;
   title: string;
@@ -10,8 +13,8 @@ export type BannerProps = {
   buttonLabel: string;
   buttonLink: string;
   ribbon?: string;
-  ribbonSize?: 'sm' | 'md';
-  ribbonColor?: 'primary' | 'secondary';
+  ribbonSize?: RibbonSize;
+  ribbonColor?: RibbonColor;
 };
 
 export const Banner: FC<BannerProps> = ({
