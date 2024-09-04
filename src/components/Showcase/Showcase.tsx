@@ -10,7 +10,6 @@ export type ShowcaseProps = {
   highlight?: HighlightProps;
   games?: GameCardProps[];
   isSectionWhite?: boolean;
-  alignment?: 'right' | 'left';
 };
 
 export const Showcase: FC<ShowcaseProps> = ({
@@ -18,7 +17,6 @@ export const Showcase: FC<ShowcaseProps> = ({
   highlight,
   games,
   isSectionWhite = false,
-  alignment = 'right',
 }) => {
   return (
     <section className={`${isSectionWhite && 'section-white'} my-4`}>
@@ -29,7 +27,7 @@ export const Showcase: FC<ShowcaseProps> = ({
           </Heading>
         )}
 
-        {!!highlight && <Highlight {...highlight} alignment={alignment} />}
+        {!!highlight && <Highlight {...highlight} />}
 
         {!!games && (
           <GameCardSlider
