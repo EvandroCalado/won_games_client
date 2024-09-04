@@ -3,6 +3,8 @@ import { FC } from 'react';
 import { Button } from '../Button';
 import { Heading } from '../Heading';
 
+export type HighlighAlignment = 'right' | 'left';
+
 export type HighlightProps = {
   title: string;
   subtitle: string;
@@ -10,7 +12,7 @@ export type HighlightProps = {
   buttonLink: string;
   backgroundImage?: string;
   floatImage?: string;
-  alignment?: 'right' | 'left';
+  alignment?: HighlighAlignment;
 };
 
 export const Highlight: FC<HighlightProps> = ({
@@ -38,6 +40,7 @@ export const Highlight: FC<HighlightProps> = ({
             fill
             priority
             className="z-20 object-contain"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
       )}
