@@ -11,24 +11,30 @@ import { Base } from '../Base';
 
 export type HomeProps = {
   banners: BannerProps[];
+  newGamesTitle: string;
   newGames: GameCardProps[];
+  mostPopularGamesTitle: string;
   mostPopularHighlight: HighlightProps;
   mostPopularGames: GameCardProps[];
+  upComingGamesTitle: string;
   upComingHighlight: HighlightProps;
   upComingGames: GameCardProps[];
-  upComingMoreGames: GameCardProps[];
+  freeGamesTitle: string;
   freeHighlight: HighlightProps;
   freeGames: GameCardProps[];
 };
 
 export const Home: FC<HomeProps> = ({
   banners,
+  newGamesTitle,
   newGames,
+  mostPopularGamesTitle,
   mostPopularHighlight,
   mostPopularGames,
+  upComingGamesTitle,
   upComingHighlight,
   upComingGames,
-  upComingMoreGames,
+  freeGamesTitle,
   freeHighlight,
   freeGames,
 }) => {
@@ -40,28 +46,27 @@ export const Home: FC<HomeProps> = ({
       </Container>
 
       {/* news */}
-      <Showcase title="News" games={newGames} isSectionWhite />
+      <Showcase title={newGamesTitle} games={newGames} isSectionWhite />
 
       {/* most popular */}
       <Showcase
-        title="Most Popular"
-        highlight={mostPopularHighlight}
+        title={mostPopularGamesTitle}
         games={mostPopularGames}
+        highlight={mostPopularHighlight}
       />
 
       {/* up comming     */}
-      <Showcase title="Up coming" games={upComingGames} />
       <Showcase
+        title={upComingGamesTitle}
+        games={upComingGames}
         highlight={upComingHighlight}
-        games={upComingMoreGames}
-        alignment="left"
       />
 
       {/* free games */}
       <Showcase
-        title="Free games"
-        highlight={freeHighlight}
+        title={freeGamesTitle}
         games={freeGames}
+        highlight={freeHighlight}
       />
     </Base>
   );

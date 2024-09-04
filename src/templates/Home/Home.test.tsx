@@ -6,12 +6,15 @@ import { Home } from '.';
 
 const props = {
   banners: banners,
+  newGamesTitle: 'New Games',
   newGames: [Slides[0]],
+  mostPopularGamesTitle: 'Most Popular',
   mostPopularHighlight: Highlight,
   mostPopularGames: [Slides[0]],
+  upComingGamesTitle: 'Upcoming Games',
   upComingHighlight: Highlight,
   upComingGames: [Slides[0]],
-  upComingMoreGames: [Slides[0]],
+  freeGamesTitle: 'Free Games',
   freeHighlight: Highlight,
   freeGames: [Slides[0]],
 };
@@ -39,6 +42,6 @@ describe('Home', () => {
     render(<Home {...props} />);
 
     expect(screen.getByTestId(/mock bannerSlider/i)).toBeInTheDocument();
-    expect(screen.getAllByTestId(/mock showcase/i)).toHaveLength(5);
+    expect(screen.getAllByTestId(/mock showcase/i)).toHaveLength(4);
   });
 });
