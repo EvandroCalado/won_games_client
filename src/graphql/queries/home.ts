@@ -8,7 +8,7 @@ import {
 } from '../fragments';
 
 export const GET_HOME: TypedDocumentNode<TypeHome> = gql`
-  query QueryHome {
+  query QueryHome($date: Date!) {
     banners {
       data {
         id
@@ -19,7 +19,7 @@ export const GET_HOME: TypedDocumentNode<TypeHome> = gql`
     }
 
     newGames: games(
-      filters: { release_date: { lte: "2024-09-02" } }
+      filters: { release_date: { lte: $date } }
       sort: "release_date:desc"
       pagination: { limit: 8 }
     ) {
@@ -37,7 +37,7 @@ export const GET_HOME: TypedDocumentNode<TypeHome> = gql`
     }
 
     upcomingGames: games(
-      filters: { release_date: { gt: "2024-09-02" } }
+      filters: { release_date: { gt: $date } }
       sort: "release_date:asc"
       pagination: { limit: 8 }
     ) {
