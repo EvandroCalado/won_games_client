@@ -6,7 +6,7 @@ export type TypeHome = {
   sections: Sections;
 };
 
-type Sections = {
+export type Sections = {
   data: Data4;
 };
 
@@ -74,7 +74,7 @@ type NewGames2 = {
   highlight: null;
 };
 
-type UpcomingGames = {
+export type UpcomingGames = {
   data: Datum4[];
   meta: Meta;
 };
@@ -106,7 +106,7 @@ type Attributes5 = {
   formats: Formats | null;
 };
 
-type NewGames = {
+export type NewGames = {
   data: Datum3[];
   meta: Meta;
 };
@@ -148,7 +148,7 @@ type Attributes3 = {
   name: string;
 };
 
-type Banners = {
+export type Banners = {
   data: Datum[];
 };
 
