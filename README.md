@@ -1,3 +1,5 @@
+<img src="/logo.svg" alt="Logo" width="200"/>
+
 # Won Games Client
 
 Bem-vindo ao **Won Games Client**! Este é o cliente para a loja de games **Won Games**, desenvolvido com Next.js e React. Este projeto utiliza uma série de tecnologias modernas e ferramentas de desenvolvimento para garantir uma experiência de usuário rica e eficiente.
