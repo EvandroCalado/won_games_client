@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Won Games Client
 
-## Getting Started
+Bem-vindo ao **Won Games Client**! Este é o cliente para a loja de games **Won Games**, desenvolvido com Next.js e React. Este projeto utiliza uma série de tecnologias modernas e ferramentas de desenvolvimento para garantir uma experiência de usuário rica e eficiente.
 
-First, run the development server:
+## 📦 Dependências
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Dependências Principais
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js**: Framework React para criação de aplicações web escaláveis e rápidas.
+- **React**: Biblioteca para construção de interfaces de usuário.
+- **@apollo/client**: Cliente para gerenciamento de estado e realização de queries GraphQL.
+- **graphql**: Biblioteca para construir e consultar APIs GraphQL.
+- **react-slick**: Biblioteca para criar carrosséis de imagens e conteúdos.
+- **slick-carousel**: Biblioteca de estilos para o carrossel Slick.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Ferramentas de Desenvolvimento
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Storybook**: Ferramenta para desenvolvimento e teste de componentes isolados.
+- **Jest**: Framework de testes para JavaScript.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática.
+- **ESLint**: Ferramenta para identificar e corrigir problemas de código.
+- **Prettier**: Formatador de código para manter um estilo consistente.
+- **Husky**: Ferramenta para configurar hooks de Git.
+- **Plop**: Ferramenta para scaffolding e geração de código.
 
-## Learn More
+## 🚀 Scripts
 
-To learn more about Next.js, take a look at the following resources:
+- **dev**: Inicia o servidor de desenvolvimento Next.js.
+- **build**: Constrói a aplicação para produção.
+- **start**: Inicia a aplicação em modo produção.
+- **lint**: Executa o linting com ESLint.
+- **typecheck**: Verifica os tipos com TypeScript.
+- **test**: Executa os testes com Jest.
+- **test:watch**: Executa os testes em modo watch com Jest.
+- **test:ci**: Executa os testes em modo CI com Jest.
+- **generate**: Executa o Plop para gerar arquivos a partir dos templates.
+- **prepare**: Configura Husky para hooks Git.
+- **storybook**: Inicia o Storybook para desenvolvimento de componentes.
+- **build-storybook**: Constrói a documentação do Storybook.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Configuração
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clone o repositório:
 
-## Deploy on Vercel
+   ```bash
+   git clone [<URL_DO_REPOSITORIO>](https://github.com/EvandroCalado/won_games_client)
+   cd won_games_client
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Instale as dependências:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```bash
+   npm install
+   ```
+
+3. Inicie o servidor de desenvolvimento:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Para iniciar o Storybook:
+
+   ```bash
+   npm run storybook
+   ```
+
+## 📄 Contribuição
+
+Para contribuir com o projeto, faça um fork do repositório, faça suas alterações em uma branch separada e envie um pull request. Certifique-se de que seus commits estão bem descritos e que o código segue as diretrizes do projeto.
+
+## 📜 Licença
+
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
