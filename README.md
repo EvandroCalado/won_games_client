@@ -43,7 +43,7 @@ Bem-vindo ao **Won Games Client**! Este é o cliente para a loja de games **Won 
 1. Clone o repositório:
 
    ```bash
-   git clone [<URL_DO_REPOSITORIO>](https://github.com/EvandroCalado/won_games_client)
+   git clone https://github.com/EvandroCalado/won_games_client
    cd won_games_client
    ```
 
