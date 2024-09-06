@@ -1,4 +1,4 @@
-<img src="logo.svg" alt="Logo" width="200"/>
+<img src="https://github.com/user-attachments/assets/49e94075-3852-4c1d-8c3f-c70c89fe0d68" alt="Logo" />
 
 # Won Games Client
 
