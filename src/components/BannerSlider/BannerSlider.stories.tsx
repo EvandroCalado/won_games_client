@@ -14,7 +14,7 @@ export default {
 } as Meta;
 
 export const Default: StoryFn<BannerSliderProps> = (args) => (
-  <div className="mx-auto max-w-screen-lg">
+  <div className="mx-auto max-w-7xl">
     <BannerSlider {...args} />
   </div>
 );
