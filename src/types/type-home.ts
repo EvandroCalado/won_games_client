@@ -61,7 +61,7 @@ type Data3 = {
 
 type Attributes7 = {
   url: string;
-  formats: Formats2;
+  formats: Formats2 | null;
 };
 
 type Formats2 = {
@@ -103,7 +103,7 @@ type Data2 = {
 
 type Attributes5 = {
   url: string;
-  formats: Formats | null;
+  formats: Formats;
 };
 
 export type NewGames = {

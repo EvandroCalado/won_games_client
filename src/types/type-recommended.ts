@@ -74,7 +74,7 @@ type Data2 = {
 
 type Attributes2 = {
   url: string;
-  formats: Formats2;
+  formats: Formats2 | null;
 };
 
 type Formats2 = {
