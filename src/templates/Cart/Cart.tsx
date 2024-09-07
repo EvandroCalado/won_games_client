@@ -18,6 +18,7 @@ import { FC } from 'react';
 import { Base } from '../Base';
 
 export type CartProps = {
+  recommendedTitle: string;
   recommendedGames: GameCardProps[];
   recommendedHighlight: HighlightProps;
 } & CartListProps &
@@ -27,6 +28,7 @@ export const Cart: FC<CartProps> = ({
   items,
   total,
   cards,
+  recommendedTitle,
   recommendedGames,
   recommendedHighlight,
 }) => {
@@ -57,7 +59,7 @@ export const Cart: FC<CartProps> = ({
       <Separator />
 
       <Showcase
-        title="You may like this games"
+        title={recommendedTitle}
         games={recommendedGames}
         highlight={recommendedHighlight}
       />
