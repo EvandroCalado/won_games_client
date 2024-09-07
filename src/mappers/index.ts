@@ -1,11 +1,18 @@
-export * from './banner-mapper';
-export * from './free-games-mapper';
-export * from './most-popular-games-mapper';
-export * from './new-games-mapper';
-export * from './upcoming-games-mapper';
+import { HighlighAlignment, RibbonColor, RibbonSize } from '@/components';
+import { Banners, Games, Highlight } from '@/types';
 
-import { HighlighAlignment } from '@/components';
-import { Games, Highlight } from '@/types';
+export const bannerMapper = (banners: Banners) => {
+  return banners.data.map((banner) => ({
+    img: banner.attributes.image.data.attributes.url,
+    title: banner.attributes.title,
+    subtitle: banner.attributes.subtitle,
+    buttonLabel: banner.attributes.button?.label,
+    buttonLink: banner.attributes.button?.link,
+    ribbon: banner.attributes.ribbon?.text,
+    ribbonColor: banner.attributes.ribbon?.color as RibbonColor,
+    ribbonSize: banner.attributes.ribbon?.size as RibbonSize,
+  }));
+};
 
 export const highlightMapper = (highlight: Highlight) => ({
   title: highlight.title,
