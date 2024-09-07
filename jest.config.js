@@ -9,6 +9,7 @@ module.exports = {
     '!src/styles/**',
     '!src/types/**',
     '!src/utils/**',
+    '!src/mappers/**',
     '!src/lib/**',
     '!src/graphql/**/*',
     '!src/**/*.stories.tsx',
