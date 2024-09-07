@@ -1,17 +1,28 @@
 import { mock as CartListMock } from '@/components/CartList/mock';
-import { mock as recommendedMock } from '@/components/GameCardSlider/mock';
-import { mock as recommendedHighlightMock } from '@/components/Highlight/mock';
 import { mock as PaymentOptionsMock } from '@/components/PaymentOptions/mock';
+import { QUERY_RECOMMENDED } from '@/graphql/queries/recommended';
+import { getClient } from '@/lib/client';
+import { gamesMapper, highlightMapper } from '@/mappers';
 import { Cart } from '@/templates';
 
-const CartPage = () => {
+const CartPage = async () => {
+  const { data } = await getClient().query({
+    query: QUERY_RECOMMENDED,
+  });
+
+  const recommendedTitle = data.recommended.data.attributes.section.title;
+  const recommendedGames = data.recommended.data.attributes.section.games;
+  const recommendedHighlight =
+    data.recommended.data.attributes.section.highlight;
+
   return (
     <Cart
       items={CartListMock}
       total={470}
       cards={PaymentOptionsMock}
-      recommendedGames={recommendedMock}
-      recommendedHighlight={recommendedHighlightMock}
+      recommendedTitle={recommendedTitle}
+      recommendedGames={gamesMapper(recommendedGames)}
+      recommendedHighlight={highlightMapper(recommendedHighlight)}
     />
   );
 };
