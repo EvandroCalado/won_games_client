@@ -5,6 +5,7 @@ import { Wishlist } from '.';
 
 const props = {
   games: recommendedMock,
+  recommendedTitle: 'You may like these games',
   recommendedGames: recommendedMock,
   recommendedHighlight: highlightMock,
 };
