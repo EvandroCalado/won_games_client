@@ -23,6 +23,7 @@ export type GameProps = {
   details: GameDetailsProps;
   upcomingGames: GameCardProps[];
   upcomingHighlight: HighlightProps;
+  recommendedTitle: string;
   recommendedGames: GameCardProps[];
 };
 
@@ -34,6 +35,7 @@ export const Game: FC<GameProps> = ({
   details,
   upcomingGames,
   upcomingHighlight,
+  recommendedTitle,
   recommendedGames,
 }) => {
   return (
@@ -75,7 +77,7 @@ export const Game: FC<GameProps> = ({
         games={upcomingGames}
         highlight={upcomingHighlight}
       />
-      <Showcase title="You may like these games" games={recommendedGames} />
+      <Showcase title={recommendedTitle} games={recommendedGames} />
     </Base>
   );
 };

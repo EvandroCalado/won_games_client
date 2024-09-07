@@ -14,6 +14,7 @@ const props: GameProps = {
   details: detailsMock,
   upcomingGames: gameMock,
   upcomingHighlight: highlightMock,
+  recommendedTitle: 'You may like these games',
   recommendedGames: gameMock,
 };
 
