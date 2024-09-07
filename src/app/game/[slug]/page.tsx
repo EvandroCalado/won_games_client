@@ -1,13 +1,15 @@
 import { Platform, Rating } from '@/components';
 import { mock as gameMock } from '@/components/GameCardSlider/mock';
 import { mock as highlightMock } from '@/components/Highlight/mock';
-import { GET_GAMES, GET_GAMES_BY_SLUG } from '@/graphql/queries';
+import { QUERY_GAMES, QUERY_GAMES_BY_SLUG } from '@/graphql/queries';
+import { QUERY_RECOMMENDED } from '@/graphql/queries/recommended';
 import { getClient } from '@/lib/client';
+import { gamesMapper } from '@/mappers';
 import { Game } from '@/templates';
 
 export const generateStaticParams = async () => {
   const { data } = await getClient().query({
-    query: GET_GAMES,
+    query: QUERY_GAMES,
     variables: { limit: 9 },
   });
 
@@ -18,9 +20,17 @@ export const generateStaticParams = async () => {
 
 const GamePage = async ({ params }: { params: { slug: string } }) => {
   const { data } = await getClient().query({
-    query: GET_GAMES_BY_SLUG,
+    query: QUERY_GAMES_BY_SLUG,
     variables: { slug: params?.slug },
   });
+  const { data: recommendedList } = await getClient().query({
+    query: QUERY_RECOMMENDED,
+  });
+
+  const recommendedTitle =
+    recommendedList.recommended.data.attributes.section.title;
+  const recommendedGames =
+    recommendedList.recommended.data.attributes.section.games;
 
   const game = {
     cover: data.games.data[0].attributes.cover.data.attributes.src,
@@ -49,7 +59,8 @@ const GamePage = async ({ params }: { params: { slug: string } }) => {
     },
     upcomingGames: gameMock,
     upcomingHighlight: highlightMock,
-    recommendedGames: gameMock,
+    recommendedTitle: recommendedTitle,
+    recommendedGames: gamesMapper(recommendedGames),
   };
 
   return <Game {...game} />;
