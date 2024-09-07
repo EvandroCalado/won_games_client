@@ -1,13 +1,25 @@
 import { mock as recommendedMock } from '@/components/GameCardSlider/mock';
-import { mock as highlightMock } from '@/components/Highlight/mock';
+import { QUERY_RECOMMENDED } from '@/graphql/queries/recommended';
+import { getClient } from '@/lib/client';
+import { gamesMapper, highlightMapper } from '@/mappers';
 import { Wishlist } from '@/templates';
 
-const WishlistPage = () => {
+const WishlistPage = async () => {
+  const { data } = await getClient().query({
+    query: QUERY_RECOMMENDED,
+  });
+
+  const recommendedTitle = data.recommended.data.attributes.section.title;
+  const recommendedGames = data.recommended.data.attributes.section.games;
+  const recommendedHighlight =
+    data.recommended.data.attributes.section.highlight;
+
   return (
     <Wishlist
       games={recommendedMock}
-      recommendedGames={recommendedMock}
-      recommendedHighlight={highlightMock}
+      recommendedTitle={recommendedTitle}
+      recommendedGames={gamesMapper(recommendedGames)}
+      recommendedHighlight={highlightMapper(recommendedHighlight)}
     />
   );
 };

@@ -13,12 +13,14 @@ import { Base } from '../Base';
 
 export type WishlistProps = {
   games?: GameCardProps[];
+  recommendedTitle: string;
   recommendedGames: GameCardProps[];
   recommendedHighlight: HighlightProps;
 };
 
 export const Wishlist: FC<WishlistProps> = ({
   games = [],
+  recommendedTitle,
   recommendedGames,
   recommendedHighlight,
 }) => {
@@ -47,7 +49,7 @@ export const Wishlist: FC<WishlistProps> = ({
 
       {/* showcase */}
       <Showcase
-        title="You may like these games"
+        title={recommendedTitle}
         games={recommendedGames}
         highlight={recommendedHighlight}
       />
