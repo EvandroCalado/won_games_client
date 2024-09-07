@@ -1,7 +1,7 @@
 import { TypeGames, TypeGamesBySlug } from '@/types';
 import { gql, TypedDocumentNode } from '@apollo/client';
 
-export const GET_GAMES: TypedDocumentNode<TypeGames> = gql`
+export const QUERY_GAMES: TypedDocumentNode<TypeGames> = gql`
   query QueryGames($limit: Int!) {
     games(pagination: { limit: $limit }) {
       data {
@@ -41,7 +41,7 @@ export const GET_GAMES: TypedDocumentNode<TypeGames> = gql`
   }
 `;
 
-export const GET_GAMES_BY_SLUG: TypedDocumentNode<TypeGamesBySlug> = gql`
+export const QUERY_GAMES_BY_SLUG: TypedDocumentNode<TypeGamesBySlug> = gql`
   query QueryGameBySlug($slug: String!) {
     games(filters: { slug: { eqi: $slug } }) {
       data {
