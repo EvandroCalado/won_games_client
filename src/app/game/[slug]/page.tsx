@@ -1,10 +1,12 @@
 import { Platform, Rating } from '@/components';
-import { mock as gameMock } from '@/components/GameCardSlider/mock';
-import { mock as highlightMock } from '@/components/Highlight/mock';
-import { QUERY_GAMES, QUERY_GAMES_BY_SLUG } from '@/graphql/queries';
-import { QUERY_RECOMMENDED } from '@/graphql/queries/recommended';
+import {
+  QUERY_GAMES,
+  QUERY_GAMES_BY_SLUG,
+  QUERY_RECOMMENDED,
+  QUERY_UPCOMING,
+} from '@/graphql/queries';
 import { getClient } from '@/lib/client';
-import { gamesMapper } from '@/mappers';
+import { gamesMapper, highlightMapper } from '@/mappers';
 import { Game } from '@/templates';
 
 export const generateStaticParams = async () => {
@@ -19,18 +21,33 @@ export const generateStaticParams = async () => {
 };
 
 const GamePage = async ({ params }: { params: { slug: string } }) => {
+  // games by slug
   const { data } = await getClient().query({
     query: QUERY_GAMES_BY_SLUG,
     variables: { slug: params?.slug },
   });
+
+  // recommended
   const { data: recommendedList } = await getClient().query({
     query: QUERY_RECOMMENDED,
+  });
+
+  //upcoming
+  const today = new Date().toISOString().slice(0, 10);
+  const { data: upcomingList } = await getClient().query({
+    query: QUERY_UPCOMING,
+    variables: { date: today },
   });
 
   const recommendedTitle =
     recommendedList.recommended.data.attributes.section.title;
   const recommendedGames =
     recommendedList.recommended.data.attributes.section.games;
+  const upcomingTitle =
+    upcomingList.showcase.data.attributes.upcomingGames.title;
+  const upcomingGames = upcomingList.upcomingGames;
+  const upcomingHighlight =
+    upcomingList.showcase?.data.attributes.upcomingGames.highlight;
 
   const game = {
     cover: data.games.data[0].attributes.cover.data.attributes.src,
@@ -57,8 +74,9 @@ const GamePage = async ({ params }: { params: { slug: string } }) => {
         (category) => category.attributes.name,
       ),
     },
-    upcomingGames: gameMock,
-    upcomingHighlight: highlightMock,
+    upcomingTitle: upcomingTitle,
+    upcomingGames: gamesMapper(upcomingGames),
+    upcomingHighlight: highlightMapper(upcomingHighlight),
     recommendedTitle: recommendedTitle,
     recommendedGames: gamesMapper(recommendedGames),
   };
