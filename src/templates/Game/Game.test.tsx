@@ -12,6 +12,7 @@ const props: GameProps = {
   gallery: galleryMock,
   description: 'Description',
   details: detailsMock,
+  upcomingTitle: 'Upcoming games',
   upcomingGames: gameMock,
   upcomingHighlight: highlightMock,
   recommendedTitle: 'You may like these games',
