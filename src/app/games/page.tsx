@@ -1,11 +1,11 @@
 import { mock as mockSidebar } from '@/components/ExploreSidebar/mock';
-import { GET_GAMES } from '@/graphql/queries';
+import { QUERY_GAMES } from '@/graphql/queries';
 import { getClient } from '@/lib/client';
 import { Games } from '@/templates';
 
 const GamesPage = async () => {
   const { data } = await getClient().query({
-    query: GET_GAMES,
+    query: QUERY_GAMES,
     variables: { limit: 9 },
   });
 
