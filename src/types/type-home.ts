@@ -3,7 +3,8 @@ export type TypeHome = {
   newGames: NewGames;
   upcomingGames: UpcomingGames;
   freeGames: UpcomingGames;
-  sections: Sections;
+} & {
+  [K in 'sections' | 'showcase']: Sections;
 };
 
 export type Sections = {
