@@ -21,6 +21,7 @@ export type GameProps = {
   gallery?: GalleryItemProps[];
   description: string;
   details: GameDetailsProps;
+  upcomingTitle: string;
   upcomingGames: GameCardProps[];
   upcomingHighlight: HighlightProps;
   recommendedTitle: string;
@@ -33,6 +34,7 @@ export const Game: FC<GameProps> = ({
   gallery,
   description,
   details,
+  upcomingTitle,
   upcomingGames,
   upcomingHighlight,
   recommendedTitle,
@@ -73,7 +75,7 @@ export const Game: FC<GameProps> = ({
 
       {/* showcases */}
       <Showcase
-        title="Upcoming"
+        title={upcomingTitle}
         games={upcomingGames}
         highlight={upcomingHighlight}
       />
