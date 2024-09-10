@@ -2,8 +2,8 @@ import { TypeGames, TypeGamesBySlug } from '@/types';
 import { gql, TypedDocumentNode } from '@apollo/client';
 
 export const QUERY_GAMES: TypedDocumentNode<TypeGames> = gql`
-  query QueryGames($limit: Int!) {
-    games(pagination: { limit: $limit }) {
+  query QueryGames($start: Int = 0, $limit: Int = 9) {
+    games(pagination: { start: $start, limit: $limit }) {
       data {
         id
         attributes {
