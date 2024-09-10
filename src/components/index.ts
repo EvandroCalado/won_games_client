@@ -22,6 +22,7 @@ export * from './GameInfo';
 export * from './GameItem';
 export * from './Heading';
 export * from './Highlight';
+export * from './Loader';
 export * from './Logo';
 export * from './Menu';
 export * from './OrdersList';
