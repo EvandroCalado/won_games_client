@@ -2,6 +2,7 @@ import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import 'slick-carousel/slick/slick.css';
+import { ApolloWrapper } from './ApolloWrapper';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -26,7 +27,7 @@ export default function RootLayout({
       <body
         className={`${poppins.className} flex h-screen flex-col justify-between`}
       >
-        {children}
+        <ApolloWrapper>{children}</ApolloWrapper>
       </body>
     </html>
   );
