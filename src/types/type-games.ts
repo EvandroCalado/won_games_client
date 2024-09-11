@@ -45,7 +45,7 @@ type Attributes2 = {
 };
 
 type Cover = {
-  data: Datum | null;
+  data: Datum;
 };
 
 type Datum = {
