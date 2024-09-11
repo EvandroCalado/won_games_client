@@ -1,10 +1,10 @@
 'use client';
 
+import { apolloCache } from '@/utils/apollo-cache';
 import { HttpLink } from '@apollo/client';
 import {
   ApolloClient,
   ApolloNextAppProvider,
-  InMemoryCache,
 } from '@apollo/experimental-nextjs-app-support';
 
 function makeClient() {
@@ -15,24 +15,7 @@ function makeClient() {
   });
 
   return new ApolloClient({
-    cache: new InMemoryCache({
-      typePolicies: {
-        Query: {
-          fields: {
-            games: {
-              keyArgs: false,
-              merge(existing, incoming) {
-                if (!existing) return incoming;
-                return {
-                  ...incoming,
-                  data: [...existing.data, ...incoming.data],
-                };
-              },
-            },
-          },
-        },
-      },
-    }),
+    cache: apolloCache,
     link: httpLink,
   });
 }
