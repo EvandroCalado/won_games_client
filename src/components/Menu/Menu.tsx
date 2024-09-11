@@ -130,7 +130,7 @@ export const Menu: FC<MenuProps> = ({ username }) => {
             Home
           </Link>
           <Link href="/games" className={linkStyles()}>
-            Store
+            Explore
           </Link>
 
           {!!username && (
