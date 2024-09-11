@@ -1,13 +1,8 @@
 'use client';
 
-import {
-  Container,
-  ExploreSidebar,
-  GameCard,
-  ItemProps,
-  Loader,
-} from '@/components';
+import { Container, ExploreSidebar, GameCard, ItemProps } from '@/components';
 import { QUERY_GAMES } from '@/graphql/queries';
+import { gamesMapper } from '@/mappers';
 import { useSuspenseQuery } from '@apollo/client';
 import { IconChevronDown } from '@tabler/icons-react';
 import { FC, useTransition } from 'react';
@@ -21,20 +16,7 @@ export const Games: FC<GamesProps> = ({ filterItems }) => {
   const [isPending, startTransition] = useTransition();
   const { data, fetchMore } = useSuspenseQuery(QUERY_GAMES);
 
-  if (!data) {
-    return <Loader />;
-  }
-
-  const games = data.games.data.map((game) => ({
-    id: game.id,
-    title: game.attributes.name,
-    slug: game.attributes.slug,
-    developer: game.attributes.developers.data[0].attributes.name,
-    img: game.attributes.cover.data?.attributes.formats.small.url,
-    price: game.attributes.price,
-    promotionalPrice: game.attributes.price * 0.75,
-  }));
-
+  const games = gamesMapper(data.games);
   const totalGames = data.games.meta.pagination.total;
   const noMoreGames = games.length >= totalGames;
 
@@ -46,17 +28,6 @@ export const Games: FC<GamesProps> = ({ filterItems }) => {
     startTransition(() => {
       fetchMore({
         variables: { start: games.length },
-        updateQuery(previousQueryResult, options) {
-          return {
-            games: {
-              ...previousQueryResult.games,
-              data: [
-                ...previousQueryResult.games.data,
-                ...options.fetchMoreResult.games.data,
-              ],
-            },
-          };
-        },
       });
     });
   };
