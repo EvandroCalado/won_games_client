@@ -44,7 +44,7 @@ export const Banner: FC<BannerProps> = ({
         style={{ backgroundImage: `url(${img})` }}
         role="img"
         aria-label={title}
-        className="h-56 w-full bg-lightGray bg-cover bg-center bg-no-repeat md:h-[580px] md:rounded"
+        className="h-56 w-full bg-lightGray bg-cover bg-center bg-no-repeat md:h-[580px]"
       ></div>
       {/* caption */}
       <div className="w-full rounded-bl rounded-br p-4 max-md:bg-black/70 md:absolute md:bottom-0 md:left-0 md:bg-gradient-to-t md:from-black/90 md:via-black/80 md:to-black/0 md:p-6">
