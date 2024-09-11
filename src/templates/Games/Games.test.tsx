@@ -1,10 +1,10 @@
 import { QUERY_GAMES } from '@/graphql/queries';
 import { MockedProvider, MockedResponse } from '@apollo/client/testing';
 import { render, screen } from '@testing-library/react';
+import { Suspense } from 'react';
 import { Games } from '.';
 
 import { mock as mockSidebar } from '@/components/ExploreSidebar/mock';
-import { Suspense } from 'react';
 
 const mocks: MockedResponse[] = [
   {
