@@ -1,7 +1,7 @@
 import { GET_HOME } from '@/graphql/queries';
-import { getClient } from '@/lib/client';
 import { bannerMapper, gamesMapper, highlightMapper } from '@/mappers';
 import { Home } from '@/templates';
+import { getClient } from '@/utils/apollo-client';
 
 const HomePage = async () => {
   const today = new Date().toISOString().slice(0, 10);

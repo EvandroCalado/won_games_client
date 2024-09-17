@@ -1,8 +1,8 @@
 import { mock as recommendedMock } from '@/components/GameCardSlider/mock';
 import { QUERY_RECOMMENDED } from '@/graphql/queries/recommended';
-import { getClient } from '@/lib/client';
 import { gamesMapper, highlightMapper } from '@/mappers';
 import { Wishlist } from '@/templates';
+import { getClient } from '@/utils/apollo-client';
 
 const WishlistPage = async () => {
   const { data } = await getClient().query({

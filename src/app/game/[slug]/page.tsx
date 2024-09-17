@@ -5,9 +5,9 @@ import {
   QUERY_RECOMMENDED,
   QUERY_UPCOMING,
 } from '@/graphql/queries';
-import { getClient } from '@/lib/client';
 import { gamesMapper, highlightMapper } from '@/mappers';
 import { Game } from '@/templates';
+import { getClient } from '@/utils/apollo-client';
 
 export const generateStaticParams = async () => {
   const { data } = await getClient().query({
